@@ -1,0 +1,7 @@
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_indexTestProject\sebduruz_indexTestProject\obj\Debug\sebduruz_indexTestProject.csprojAssemblyReference.cache
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_indexTestProject\sebduruz_indexTestProject\obj\Debug\sebduruz_indexTestProject.csproj.CoreCompileInputs.cache
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_indexTestProject\sebduruz_indexTestProject\bin\Debug\sebduruz_indexTestProject.exe.config
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_indexTestProject\sebduruz_indexTestProject\bin\Debug\sebduruz_indexTestProject.exe
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_indexTestProject\sebduruz_indexTestProject\bin\Debug\sebduruz_indexTestProject.pdb
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_indexTestProject\sebduruz_indexTestProject\obj\Debug\sebduruz_indexTestProject.exe
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_indexTestProject\sebduruz_indexTestProject\obj\Debug\sebduruz_indexTestProject.pdb
