@@ -1,0 +1,10 @@
+D:\01-projets\2_eme_annee\044-P_POO\01-Code\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\bin\Debug\sebduruz_Index_FormTestProject.exe.config
+D:\01-projets\2_eme_annee\044-P_POO\01-Code\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\bin\Debug\sebduruz_Index_FormTestProject.exe
+D:\01-projets\2_eme_annee\044-P_POO\01-Code\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\bin\Debug\sebduruz_Index_FormTestProject.pdb
+D:\01-projets\2_eme_annee\044-P_POO\01-Code\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.csprojAssemblyReference.cache
+D:\01-projets\2_eme_annee\044-P_POO\01-Code\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.Properties.Resources.resources
+D:\01-projets\2_eme_annee\044-P_POO\01-Code\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.csproj.GenerateResource.cache
+D:\01-projets\2_eme_annee\044-P_POO\01-Code\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.csproj.CoreCompileInputs.cache
+D:\01-projets\2_eme_annee\044-P_POO\01-Code\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.exe
+D:\01-projets\2_eme_annee\044-P_POO\01-Code\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.pdb
+D:\01-projets\2_eme_annee\044-P_POO\01-Code\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.MainView.resources
