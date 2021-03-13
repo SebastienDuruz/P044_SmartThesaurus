@@ -3,12 +3,9 @@
 /// Date : 19.02.2021
 /// Description : A basic test project, try to use indexation functions.
 
+using sebduruz_indexTestProject.Database;
+using sebduruz_indexTestProject.Indexation;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace sebduruz_indexTestProject
 {
@@ -20,50 +17,17 @@ namespace sebduruz_indexTestProject
         /// <summary>
         /// Main Method
         /// </summary>
-        static void Main(string[] args)
+        static void Main()
         {
-            foreach (string path in args)
-            {
-                if (File.Exists(path))
-                {
-                    // This path is a file
-                    ProcessFile(path);
-                }
-                else if (Directory.Exists(path))
-                {
-                    // This path is a directory
-                    ProcessDirectory(path);
-                }
-                else
-                {
-                    Console.WriteLine("{0} is not a valid file or directory.", path);
-                }
-            }
+            //Create the file indexator and exec
+            FileIndexation indexator = new FileIndexation(Environment.CurrentDirectory);
+            indexator.ExecIndexation();
+
+            //Connect to database and exec a request
+            SQLiteConnect database = new SQLiteConnect($"{Environment.CurrentDirectory}\\myDatabase.db");
+            database.ExecSelect("SELECT * from t_file;");
 
             Console.ReadLine();
-        }
-
-        // Process all files in the directory passed in, recurse on any directories
-        // that are found, and process the files they contain.
-        public static void ProcessDirectory(string targetDirectory)
-        {
-            // Process the list of files found in the directory.
-            string[] fileEntries = Directory.GetFiles(targetDirectory);
-            foreach (string fileName in fileEntries)
-                ProcessFile(fileName);
-
-            // Recurse into subdirectories of this directory.
-            string[] subdirectoryEntries = Directory.GetDirectories(targetDirectory);
-            foreach (string subdirectory in subdirectoryEntries)
-                ProcessDirectory(subdirectory);
-        }
-
-        // Insert logic for processing found files here.
-        public static void ProcessFile(string path)
-        {
-            string[] parts = path.Split('\\');
-            path = parts[parts.Count() - 1];
-            Console.WriteLine("Processed file '{0}'.", path);
         }
     }
 }
