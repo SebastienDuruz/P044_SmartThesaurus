@@ -8,3 +8,13 @@ D:\01-projets\2_eme_annee\044-P_POO\01-Code\P044_SmartThesaurus\sebduruz_Index_F
 D:\01-projets\2_eme_annee\044-P_POO\01-Code\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.exe
 D:\01-projets\2_eme_annee\044-P_POO\01-Code\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.pdb
 D:\01-projets\2_eme_annee\044-P_POO\01-Code\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.MainView.resources
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\bin\Debug\sebduruz_Index_FormTestProject.exe.config
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\bin\Debug\sebduruz_Index_FormTestProject.exe
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\bin\Debug\sebduruz_Index_FormTestProject.pdb
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.csprojAssemblyReference.cache
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.Properties.Resources.resources
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.MainView.resources
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.csproj.GenerateResource.cache
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.csproj.CoreCompileInputs.cache
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.exe
+C:\Users\Sébastien\Documents\01-ETMl\P_POO\01-Github\P044_SmartThesaurus\sebduruz_Index_FormTestProject\sebduruz_Index_FormTestProject\obj\Debug\sebduruz_Index_FormTestProject.pdb
