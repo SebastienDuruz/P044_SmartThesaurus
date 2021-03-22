@@ -1,17 +1,10 @@
 ﻿/// ETML
 /// Autor : Sébastien Duruz
 /// Date : 22.03.2021
-/// Description : A basic project to test Web scraping.
+/// Description : A basic project to test Web scraping. Inspired by https://www.dotnetperls.com/scraping-html for the creation of WebsiteIndexer Class.
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HtmlAgilityPack;
-using ScrapySharp.Extensions;
-using ScrapySharp.Network;
-using ScrapySharp;
 
 namespace WikipediaScraperGame
 {
@@ -21,47 +14,27 @@ namespace WikipediaScraperGame
     class Program
     {
         /// <summary>
-        /// Class Atributs
-        /// </summary>
-        private static ScrapingBrowser _browser = new ScrapingBrowser();
-
-        /// <summary>
         /// Method Main
         /// </summary>
         static void Main()
         {
-            GetMainPageLinks("https://fr.wikipedia.org/wiki/Craigslist");
+            //Variables
+            WebsiteIndex pageContent = new WebsiteIndex();
+            List<string> links = new List<string>();
 
-            Console.ReadLine();
-        }
+            //Get the content from url
+            string html = pageContent.GetHtmlContent("https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal");
 
-        static List<string> GetMainPageLinks(string url)
-        {
-            List<string> homePageLinks = new List<string>();
-            HtmlNode html = GetHtml(url);
-            IEnumerable<HtmlNode> links = html.CssSelect("a");
+            //Find each urls
+            links = pageContent.Find(html);
 
-            foreach(var link in links)
+            // Print each links contains into list
+            foreach (string link in links)
             {
-                if (link.Attributes["OuterHtml"].Value.Contains("href"))
-                {
-                    Console.WriteLine(link.Attributes["href"].Value);
-                    homePageLinks.Add(link.Attributes["href"].Value);
-                }
+                Console.WriteLine($"{link}");
             }
 
-            return homePageLinks;
-        }
-
-        /// <summary>
-        /// Get a html page from browser
-        /// </summary>
-        /// <param name="url">The url to load</param>
-        /// <returns>A html page got by the browser</returns>
-        static HtmlNode GetHtml(string url)
-        {
-            WebPage webpage = _browser.NavigateToPage(new Uri(url));
-            return webpage.Html;
+            Console.ReadLine();
         }
     }
 }
