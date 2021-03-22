@@ -56,6 +56,7 @@ namespace sebduruz_Index_FormTestProject.Models
             //Get the infos from reader
             while (reader.Read())
             {
+
                 Console.WriteLine($"{reader.GetName(0)} {reader.GetName(1)} {reader.GetName(2)} {reader.GetName(3)}");
                 Console.WriteLine($"{reader.GetValue(0)} {reader.GetValue(1)} {reader.GetValue(2)} {reader.GetValue(3)}");
             }
