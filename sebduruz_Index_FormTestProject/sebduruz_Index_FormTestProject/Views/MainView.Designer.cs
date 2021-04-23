@@ -40,14 +40,13 @@ namespace sebduruz_Index_FormTestProject
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ouvrirLexploreurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.favorisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listeFavorisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ouvrirDansLexplorateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viderLesDonnéesChargéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viderToutesLesDonnéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.favorisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeFavorisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -152,34 +151,6 @@ namespace sebduruz_Index_FormTestProject
             this.ouvrirLexploreurToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.ouvrirLexploreurToolStripMenuItem.Text = "Fichier";
             // 
-            // favorisToolStripMenuItem
-            // 
-            this.favorisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listeFavorisToolStripMenuItem,
-            this.ajouterToolStripMenuItem,
-            this.supprimerToolStripMenuItem});
-            this.favorisToolStripMenuItem.Name = "favorisToolStripMenuItem";
-            this.favorisToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.favorisToolStripMenuItem.Text = "Favoris";
-            // 
-            // listeFavorisToolStripMenuItem
-            // 
-            this.listeFavorisToolStripMenuItem.Name = "listeFavorisToolStripMenuItem";
-            this.listeFavorisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.listeFavorisToolStripMenuItem.Text = "Liste favoris";
-            // 
-            // ajouterToolStripMenuItem
-            // 
-            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ajouterToolStripMenuItem.Text = "Ajouter";
-            // 
-            // supprimerToolStripMenuItem
-            // 
-            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.supprimerToolStripMenuItem.Text = "Supprimer";
-            // 
             // ouvrirDansLexplorateurToolStripMenuItem
             // 
             this.ouvrirDansLexplorateurToolStripMenuItem.Name = "ouvrirDansLexplorateurToolStripMenuItem";
@@ -203,6 +174,27 @@ namespace sebduruz_Index_FormTestProject
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
             this.quitterToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
+            // 
+            // favorisToolStripMenuItem
+            // 
+            this.favorisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listeFavorisToolStripMenuItem,
+            this.ajouterToolStripMenuItem});
+            this.favorisToolStripMenuItem.Name = "favorisToolStripMenuItem";
+            this.favorisToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.favorisToolStripMenuItem.Text = "Favoris";
+            // 
+            // listeFavorisToolStripMenuItem
+            // 
+            this.listeFavorisToolStripMenuItem.Name = "listeFavorisToolStripMenuItem";
+            this.listeFavorisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listeFavorisToolStripMenuItem.Text = "Liste favoris";
+            // 
+            // ajouterToolStripMenuItem
+            // 
+            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajouterToolStripMenuItem.Text = "Ajouter";
             // 
             // MainView
             // 
@@ -249,7 +241,6 @@ namespace sebduruz_Index_FormTestProject
         private System.Windows.Forms.ToolStripMenuItem favorisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeFavorisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
     }
 }
