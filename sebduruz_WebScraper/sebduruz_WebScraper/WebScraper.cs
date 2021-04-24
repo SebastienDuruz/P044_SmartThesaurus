@@ -1,6 +1,6 @@
 ﻿/// ETML
 /// Autor : Sébastien Duruz
-/// Date : 22.03.2021
+/// Date : 24.04.2021
 /// Description : A basic project to test Web scraping.
 ///               Inspired by https://www.dotnetperls.com/scraping-html for the creation of WebsiteIndexer Class.
 
@@ -9,12 +9,12 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text.RegularExpressions;
 
-namespace WikipediaScraperGame
+namespace sebduruz_WebScraper
 {
     /// <summary>
-    /// Class WebsiteIndex
+    /// Class WebScraper
     /// </summary>
-    public class WebsiteIndex
+    public class WebScraper
     {
         /// <summary>
         /// Class Atributs
@@ -29,7 +29,7 @@ namespace WikipediaScraperGame
         /// <summary>
         /// Default Constuctor
         /// </summary>
-        public WebsiteIndex()
+        public WebScraper()
         {
             this._client = new WebClient();
             this._client.Headers.Add("User-Agent", "C# console program");
@@ -50,7 +50,7 @@ namespace WikipediaScraperGame
             {
                 content = this._client.DownloadString(url);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
@@ -64,8 +64,6 @@ namespace WikipediaScraperGame
         /// <param name="file">The html file where to find</param>
         public void FindLinks(string file)
         {
-            string link = "";
-
             // Find all matches in file.
             MatchCollection m1 = Regex.Matches(file, @"(<a.*?>.*?</a>)",
                 RegexOptions.Singleline);
@@ -79,11 +77,12 @@ namespace WikipediaScraperGame
                 Match m2 = Regex.Match(value, @"href=\""(.*?)\""", RegexOptions.Singleline);
                 if (m2.Success)
                 {
-                    Console.WriteLine(m2.Groups[1].Value);
-                    link = m2.Groups[1].Value;
+                    //Keep only full links (start with http)
+                    if(m2.Groups[1].Value.StartsWith("http"))
+                    {
+                        this.Links.Add(m2.Groups[1].Value);
+                    }
                 }
-
-                this.Links.Add(link);
             }
         }
     }

@@ -1,0 +1,16 @@
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\bin\Debug\net5.0\sebduruz_WebScraper.exe
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\bin\Debug\net5.0\sebduruz_WebScraper.deps.json
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\bin\Debug\net5.0\sebduruz_WebScraper.runtimeconfig.json
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\bin\Debug\net5.0\sebduruz_WebScraper.runtimeconfig.dev.json
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\bin\Debug\net5.0\sebduruz_WebScraper.dll
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\bin\Debug\net5.0\ref\sebduruz_WebScraper.dll
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\bin\Debug\net5.0\sebduruz_WebScraper.pdb
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\obj\Debug\net5.0\sebduruz_WebScraper.csprojAssemblyReference.cache
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\obj\Debug\net5.0\sebduruz_WebScraper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\obj\Debug\net5.0\sebduruz_WebScraper.AssemblyInfoInputs.cache
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\obj\Debug\net5.0\sebduruz_WebScraper.AssemblyInfo.cs
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\obj\Debug\net5.0\sebduruz_WebScraper.csproj.CoreCompileInputs.cache
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\obj\Debug\net5.0\sebduruz_WebScraper.dll
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\obj\Debug\net5.0\ref\sebduruz_WebScraper.dll
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\obj\Debug\net5.0\sebduruz_WebScraper.pdb
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\sebduruz_WebScraper\sebduruz_WebScraper\obj\Debug\net5.0\sebduruz_WebScraper.genruntimeconfig.cache
