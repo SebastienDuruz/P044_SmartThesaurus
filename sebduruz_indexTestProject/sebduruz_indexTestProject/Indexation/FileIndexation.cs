@@ -52,7 +52,6 @@ namespace sebduruz_indexTestProject.Indexation
         /// <param name="targetDirectory">The Targeted directory path</param>
         public static void ProcessDirectory(string targetDirectory)
         {
-            //Console.WriteLine(targetDirectory);
             // Process the list of files found in the directory.
             string[] fileEntries = Directory.GetFiles(targetDirectory);
             foreach (string fileName in fileEntries)
