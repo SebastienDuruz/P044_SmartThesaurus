@@ -29,151 +29,72 @@ namespace sebduruz_Index_FormTestProject
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.IndexButton = new System.Windows.Forms.Button();
-            this.searchButton = new System.Windows.Forms.Button();
-            this.webPageCheckbox = new System.Windows.Forms.CheckBox();
-            this.FilterButton = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ouvrirLexploreurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fichiersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ouvrirDansLexplorateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viderLesDonnéesChargéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viderToutesLesDonnéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exporterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterLapplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.favorisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeFavorisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.afficherLaideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pathTextBox = new System.Windows.Forms.TextBox();
+            this.filesRadio = new System.Windows.Forms.RadioButton();
+            this.webRadio = new System.Windows.Forms.RadioButton();
+            this.execButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.addFavLbl = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.outputBox = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 111);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1030, 510);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(12, 37);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(599, 20);
-            this.textBox2.TabIndex = 2;
-            // 
-            // IndexButton
-            // 
-            this.IndexButton.Location = new System.Drawing.Point(617, 37);
-            this.IndexButton.Name = "IndexButton";
-            this.IndexButton.Size = new System.Drawing.Size(68, 20);
-            this.IndexButton.TabIndex = 3;
-            this.IndexButton.Text = "Indexer";
-            this.IndexButton.UseVisualStyleBackColor = true;
-            // 
-            // searchButton
-            // 
-            this.searchButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.searchButton.Location = new System.Drawing.Point(270, 84);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(66, 20);
-            this.searchButton.TabIndex = 4;
-            this.searchButton.Text = "Chercher";
-            this.searchButton.UseVisualStyleBackColor = false;
-            // 
-            // webPageCheckbox
-            // 
-            this.webPageCheckbox.AutoSize = true;
-            this.webPageCheckbox.Location = new System.Drawing.Point(691, 40);
-            this.webPageCheckbox.Name = "webPageCheckbox";
-            this.webPageCheckbox.Size = new System.Drawing.Size(86, 17);
-            this.webPageCheckbox.TabIndex = 5;
-            this.webPageCheckbox.Text = "Page Web ?";
-            this.webPageCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // FilterButton
-            // 
-            this.FilterButton.Location = new System.Drawing.Point(617, 83);
-            this.FilterButton.Name = "FilterButton";
-            this.FilterButton.Size = new System.Drawing.Size(66, 20);
-            this.FilterButton.TabIndex = 6;
-            this.FilterButton.Text = "Filtrer";
-            this.FilterButton.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(365, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(246, 20);
-            this.textBox3.TabIndex = 7;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::sebduruz_Index_FormTestProject.Properties.Resources.help_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(974, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 66);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ouvrirLexploreurToolStripMenuItem,
-            this.favorisToolStripMenuItem});
+            this.fichiersToolStripMenuItem,
+            this.favorisToolStripMenuItem,
+            this.aideToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1054, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // ouvrirLexploreurToolStripMenuItem
+            // fichiersToolStripMenuItem
             // 
-            this.ouvrirLexploreurToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fichiersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ouvrirDansLexplorateurToolStripMenuItem,
-            this.viderLesDonnéesChargéesToolStripMenuItem,
-            this.viderToutesLesDonnéesToolStripMenuItem,
-            this.quitterToolStripMenuItem});
-            this.ouvrirLexploreurToolStripMenuItem.Name = "ouvrirLexploreurToolStripMenuItem";
-            this.ouvrirLexploreurToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.ouvrirLexploreurToolStripMenuItem.Text = "Fichier";
+            this.exporterToolStripMenuItem,
+            this.quitterLapplicationToolStripMenuItem});
+            this.fichiersToolStripMenuItem.Name = "fichiersToolStripMenuItem";
+            this.fichiersToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.fichiersToolStripMenuItem.Text = "Fichiers";
             // 
             // ouvrirDansLexplorateurToolStripMenuItem
             // 
             this.ouvrirDansLexplorateurToolStripMenuItem.Name = "ouvrirDansLexplorateurToolStripMenuItem";
-            this.ouvrirDansLexplorateurToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.ouvrirDansLexplorateurToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.ouvrirDansLexplorateurToolStripMenuItem.Text = "Ouvrir dans l\'explorateur";
             // 
-            // viderLesDonnéesChargéesToolStripMenuItem
+            // exporterToolStripMenuItem
             // 
-            this.viderLesDonnéesChargéesToolStripMenuItem.Name = "viderLesDonnéesChargéesToolStripMenuItem";
-            this.viderLesDonnéesChargéesToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.viderLesDonnéesChargéesToolStripMenuItem.Text = "Vider les données chargées";
+            this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
+            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.exporterToolStripMenuItem.Text = "Exporter";
             // 
-            // viderToutesLesDonnéesToolStripMenuItem
+            // quitterLapplicationToolStripMenuItem
             // 
-            this.viderToutesLesDonnéesToolStripMenuItem.Name = "viderToutesLesDonnéesToolStripMenuItem";
-            this.viderToutesLesDonnéesToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.viderToutesLesDonnéesToolStripMenuItem.Text = "Vider toutes les données";
-            // 
-            // quitterToolStripMenuItem
-            // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.quitterToolStripMenuItem.Text = "Quitter";
+            this.quitterLapplicationToolStripMenuItem.Name = "quitterLapplicationToolStripMenuItem";
+            this.quitterLapplicationToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.quitterLapplicationToolStripMenuItem.Text = "Quitter l\'application";
             // 
             // favorisToolStripMenuItem
             // 
@@ -187,61 +108,197 @@ namespace sebduruz_Index_FormTestProject
             // listeFavorisToolStripMenuItem
             // 
             this.listeFavorisToolStripMenuItem.Name = "listeFavorisToolStripMenuItem";
-            this.listeFavorisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listeFavorisToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.listeFavorisToolStripMenuItem.Text = "Liste favoris";
             // 
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
+            // 
+            // aideToolStripMenuItem
+            // 
+            this.aideToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.afficherLaideToolStripMenuItem});
+            this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.aideToolStripMenuItem.Text = "Aide";
+            // 
+            // afficherLaideToolStripMenuItem
+            // 
+            this.afficherLaideToolStripMenuItem.Name = "afficherLaideToolStripMenuItem";
+            this.afficherLaideToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.afficherLaideToolStripMenuItem.Text = "Afficher l\'aide";
+            // 
+            // pathTextBox
+            // 
+            this.pathTextBox.Location = new System.Drawing.Point(14, 55);
+            this.pathTextBox.Name = "pathTextBox";
+            this.pathTextBox.Size = new System.Drawing.Size(677, 20);
+            this.pathTextBox.TabIndex = 11;
+            // 
+            // filesRadio
+            // 
+            this.filesRadio.AutoSize = true;
+            this.filesRadio.Checked = true;
+            this.filesRadio.Location = new System.Drawing.Point(727, 56);
+            this.filesRadio.Name = "filesRadio";
+            this.filesRadio.Size = new System.Drawing.Size(61, 17);
+            this.filesRadio.TabIndex = 12;
+            this.filesRadio.TabStop = true;
+            this.filesRadio.Text = "Fichiers";
+            this.filesRadio.UseVisualStyleBackColor = true;
+            // 
+            // webRadio
+            // 
+            this.webRadio.AutoSize = true;
+            this.webRadio.Location = new System.Drawing.Point(794, 56);
+            this.webRadio.Name = "webRadio";
+            this.webRadio.Size = new System.Drawing.Size(76, 17);
+            this.webRadio.TabIndex = 13;
+            this.webRadio.Text = "Page Web";
+            this.webRadio.UseVisualStyleBackColor = true;
+            // 
+            // execButton
+            // 
+            this.execButton.Location = new System.Drawing.Point(892, 41);
+            this.execButton.Name = "execButton";
+            this.execButton.Size = new System.Drawing.Size(150, 47);
+            this.execButton.TabIndex = 14;
+            this.execButton.Text = "Executer";
+            this.execButton.UseVisualStyleBackColor = true;
+            this.execButton.Click += new System.EventHandler(this.ExecButton);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(759, 194);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Nom";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(735, 258);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Extension";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(794, 296);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(213, 34);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Rechercher";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(794, 191);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(213, 20);
+            this.textBox2.TabIndex = 18;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(794, 255);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(213, 20);
+            this.textBox3.TabIndex = 19;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(780, 474);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(81, 70);
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // addFavLbl
+            // 
+            this.addFavLbl.AutoSize = true;
+            this.addFavLbl.Location = new System.Drawing.Point(889, 502);
+            this.addFavLbl.Name = "addFavLbl";
+            this.addFavLbl.Size = new System.Drawing.Size(94, 13);
+            this.addFavLbl.TabIndex = 21;
+            this.addFavLbl.Text = "Ajouter aux favoris";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(171, 13);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "chemin d\'accès \\ Page web (URL)";
+            // 
+            // outputBox
+            // 
+            this.outputBox.Location = new System.Drawing.Point(14, 91);
+            this.outputBox.Name = "outputBox";
+            this.outputBox.Size = new System.Drawing.Size(677, 530);
+            this.outputBox.TabIndex = 23;
+            this.outputBox.Text = "";
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 633);
+            this.Controls.Add(this.outputBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.addFavLbl);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.FilterButton);
-            this.Controls.Add(this.webPageCheckbox);
-            this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.IndexButton);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.execButton);
+            this.Controls.Add(this.webRadio);
+            this.Controls.Add(this.filesRadio);
+            this.Controls.Add(this.pathTextBox);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainView";
             this.Text = "Test indexation";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button IndexButton;
-        private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.CheckBox webPageCheckbox;
-        private System.Windows.Forms.Button FilterButton;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem ouvrirLexploreurToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ouvrirDansLexplorateurToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viderLesDonnéesChargéesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viderToutesLesDonnéesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem favorisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeFavorisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fichiersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ouvrirDansLexplorateurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitterLapplicationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exporterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem afficherLaideToolStripMenuItem;
+        private System.Windows.Forms.TextBox pathTextBox;
+        private System.Windows.Forms.RadioButton filesRadio;
+        private System.Windows.Forms.RadioButton webRadio;
+        private System.Windows.Forms.Button execButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label addFavLbl;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox outputBox;
     }
 }
 
