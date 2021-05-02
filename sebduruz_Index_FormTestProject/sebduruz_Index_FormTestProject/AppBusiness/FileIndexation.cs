@@ -1,32 +1,54 @@
 ﻿/// ETML
 /// Autor : Sébastien Duruz
-/// Date : 12.03.2021
-/// Description : Test how to index file with Microsoft libraries
+/// Date : 02.05.2021
+/// Description : Manipulation of indexation from Microsoft libraries. Use of Singleton principle
 
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace sebduruz_indexTestProject.Indexation
+namespace sebduruz_Index_FormTestProject.AppBusiness
 {
     /// <summary>
     /// Class FileIndexation
     /// </summary>
     public class FileIndexation
     {
-        public string _sourcePath;
-
+        /// <summary>
+        /// Class Properties
+        /// </summary>
+        public string SourcePath { get; set; }
         public List<string> Files { get; set; }
+        private static FileIndexation Instance { get; set; }
 
         /// <summary>
         /// Custom Constructor
         /// </summary>
         /// <param name="sourcePath">The source path of starting folder</param>
-        public FileIndexation(string sourcePath)
+        private FileIndexation(string sourcePath)
         {
-            this._sourcePath = sourcePath;
+            this.SourcePath = sourcePath;
             this.Files = new List<string>();
+        }
+
+        /// <summary>
+        /// Get the instance of the object
+        /// </summary>
+        /// <param name="sourcePath">The sourcePath from where indexation should start</param>
+        /// <returns>The instance</returns>
+        public static FileIndexation GetInstance(string sourcePath)
+        {
+            if(Instance == null)
+            {
+                Instance = new FileIndexation(sourcePath);
+            }
+            else
+            {
+                Instance.SourcePath = sourcePath;
+            }
+
+            return Instance;
         }
 
         /// <summary>
@@ -34,19 +56,19 @@ namespace sebduruz_indexTestProject.Indexation
         /// </summary>
         public void ExecIndexation()
         {
-            if (File.Exists(this._sourcePath))
+            if (File.Exists(this.SourcePath))
             {
                 // This path is a file
-                ProcessFile(this._sourcePath);
+                ProcessFile(this.SourcePath);
             }
-            else if (Directory.Exists(this._sourcePath))
+            else if (Directory.Exists(this.SourcePath))
             {
                 // This path is a directory
-                ProcessDirectory(this._sourcePath);
+                ProcessDirectory(this.SourcePath);
             }
             else
             {
-                Console.WriteLine("{0} is not a valid file or directory.", this._sourcePath);
+                Console.WriteLine("{0} is not a valid file or directory.", this.SourcePath);
             }
         }
 

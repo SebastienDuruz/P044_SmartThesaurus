@@ -3,17 +3,27 @@
 /// Date : 12.03.2021
 /// Description : The main controller of the application
 
+using sebduruz_Index_FormTestProject.AppBusiness;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace sebduruz_Index_FormTestProject.Controllers
 {
-
     /// <summary>
     /// Class Controller
     /// </summary>
     public class Controller
     {
+        /// <summary>
+        /// Class Atributs
+        /// </summary>
         private MainView _mainView = new MainView();
+
+        /// <summary>
+        /// Class Properties
+        /// </summary>
+        private WebScraper WebScraper { get; set; }
+        private FileIndexation FileIndexer { get; set; }
 
         /// <summary>
         /// Default Constructor
@@ -30,7 +40,44 @@ namespace sebduruz_Index_FormTestProject.Controllers
         {
             Application.Run(this._mainView);
         }
-    }
 
-    
+        /// <summary>
+        /// Get all the files from indexed folder
+        /// </summary>
+        /// <param name="path">The path where to start indexation</param>
+        /// <returns>List of files indexed</returns>
+        public List<string> GetFilesFromIndexation(string path)
+        {
+            //Get the instance and start indexing
+            this.FileIndexer = FileIndexation.GetInstance(path);
+            this.FileIndexer.ExecIndexation();
+
+            //Return the results
+            return this.FileIndexer.Files;
+        }
+
+        /// <summary>
+        /// Get all links from webpage
+        /// </summary>
+        /// <param name="webPage">The webpage to search for links</param>
+        /// <returns>List of links got from webScraper</returns>
+        public List<string> GetLinksFromWebScraper(string webPagePath)
+        {
+            //Get the instance and Get links from page
+            this.WebScraper = WebScraper.GetInstance();
+            string webPageContent = this.WebScraper.GetHtmlContent(webPagePath);
+           
+            if(webPageContent != null)
+            {
+                this.WebScraper.FindLinks(webPageContent);
+
+                //Return the results
+                return this.WebScraper.Links;
+            }
+            else
+            {
+                return null;
+            }
+        }
+    }
 }

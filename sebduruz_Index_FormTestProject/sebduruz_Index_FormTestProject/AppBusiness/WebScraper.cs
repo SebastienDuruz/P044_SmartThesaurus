@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text.RegularExpressions;
 
-namespace sebduruz_WebScraper
+namespace sebduruz_Index_FormTestProject.AppBusiness
 {
     /// <summary>
     /// Class WebScraper
@@ -25,15 +25,30 @@ namespace sebduruz_WebScraper
         /// Class Properties
         /// </summary>
         public List<string> Links { get; set; }
+        private static WebScraper Instance { get; set; }
 
         /// <summary>
         /// Default Constuctor
         /// </summary>
-        public WebScraper()
+        private WebScraper()
         {
             this._client = new WebClient();
             this._client.Headers.Add("User-Agent", "C# console program");
             this.Links = new List<string>();
+        }
+
+        /// <summary>
+        /// Get the instance of the object
+        /// </summary>
+        /// <returns>The instance</returns>
+        public static WebScraper GetInstance()
+        {
+            if (Instance == null)
+            {
+                Instance = new WebScraper();
+            }
+
+            return Instance;
         }
 
         /// <summary>
@@ -43,19 +58,16 @@ namespace sebduruz_WebScraper
         /// <returns>A string containing the page data</returns>
         public string GetHtmlContent(string url)
         {
-            string content = null;
-
             //Try to get content from given URL
             try
             {
-                content = this._client.DownloadString(url);
+                return this._client.DownloadString(url);
             }
-            catch (Exception ex)
+            //Return null if error
+            catch
             {
-                Console.WriteLine(ex.Message);
+                return null;
             }
-
-            return content;
         }
 
         /// <summary>

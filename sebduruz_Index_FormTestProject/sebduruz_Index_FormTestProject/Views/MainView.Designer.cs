@@ -89,12 +89,14 @@ namespace sebduruz_Index_FormTestProject
             this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
             this.exporterToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.exporterToolStripMenuItem.Text = "Exporter";
+            this.exporterToolStripMenuItem.Click += new System.EventHandler(this.ExportDatasToolStripMenuItem_Click);
             // 
             // quitterLapplicationToolStripMenuItem
             // 
             this.quitterLapplicationToolStripMenuItem.Name = "quitterLapplicationToolStripMenuItem";
             this.quitterLapplicationToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.quitterLapplicationToolStripMenuItem.Text = "Quitter l\'application";
+            this.quitterLapplicationToolStripMenuItem.Text = "Quitter";
+            this.quitterLapplicationToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // favorisToolStripMenuItem
             // 
