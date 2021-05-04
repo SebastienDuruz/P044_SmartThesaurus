@@ -117,6 +117,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\folderIconSimple.png" />
     <Content Include="Ressources\help_icon.jpg" />
   </ItemGroup>
   <ItemGroup />

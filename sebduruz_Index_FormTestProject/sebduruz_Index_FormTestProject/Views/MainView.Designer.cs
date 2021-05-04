@@ -29,7 +29,8 @@ namespace sebduruz_Index_FormTestProject
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.components = new System.ComponentModel.Container();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fichiersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ouvrirDansLexplorateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exporterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,30 +44,34 @@ namespace sebduruz_Index_FormTestProject
             this.filesRadio = new System.Windows.Forms.RadioButton();
             this.webRadio = new System.Windows.Forms.RadioButton();
             this.execButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.filtersTextBox = new System.Windows.Forms.TextBox();
             this.addFavLbl = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.pathLabel = new System.Windows.Forms.Label();
             this.outputBox = new System.Windows.Forms.RichTextBox();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.openFolderPictureBox = new System.Windows.Forms.PictureBox();
+            this.favoritePictureBox = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.nbOfResultsLabel = new System.Windows.Forms.Label();
+            this.menuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.openFolderPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.favoritePictureBox)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichiersToolStripMenuItem,
             this.favorisToolStripMenuItem,
             this.aideToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1054, 24);
-            this.menuStrip1.TabIndex = 9;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(1054, 24);
+            this.menuStrip.TabIndex = 9;
+            this.menuStrip.Text = "menuStrip1";
             // 
             // fichiersToolStripMenuItem
             // 
@@ -135,10 +140,13 @@ namespace sebduruz_Index_FormTestProject
             // 
             // pathTextBox
             // 
-            this.pathTextBox.Location = new System.Drawing.Point(14, 55);
+            this.pathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pathTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.pathTextBox.Location = new System.Drawing.Point(56, 55);
+            this.pathTextBox.Multiline = true;
             this.pathTextBox.Name = "pathTextBox";
-            this.pathTextBox.Size = new System.Drawing.Size(677, 20);
-            this.pathTextBox.TabIndex = 11;
+            this.pathTextBox.Size = new System.Drawing.Size(635, 30);
+            this.pathTextBox.TabIndex = 4;
             // 
             // filesRadio
             // 
@@ -172,54 +180,24 @@ namespace sebduruz_Index_FormTestProject
             this.execButton.UseVisualStyleBackColor = true;
             this.execButton.Click += new System.EventHandler(this.ExecButton);
             // 
-            // label1
+            // searchButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(759, 194);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Nom";
+            this.searchButton.Location = new System.Drawing.Point(21, 141);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(138, 34);
+            this.searchButton.TabIndex = 17;
+            this.searchButton.Text = "Rechercher";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
-            // label2
+            // filtersTextBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(735, 258);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Extension";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(794, 296);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(213, 34);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Rechercher";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(794, 191);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 20);
-            this.textBox2.TabIndex = 18;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(794, 255);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(213, 20);
-            this.textBox3.TabIndex = 19;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(780, 474);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(81, 70);
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
+            this.filtersTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filtersTextBox.Location = new System.Drawing.Point(21, 44);
+            this.filtersTextBox.Multiline = true;
+            this.filtersTextBox.Name = "filtersTextBox";
+            this.filtersTextBox.Size = new System.Drawing.Size(259, 78);
+            this.filtersTextBox.TabIndex = 18;
             // 
             // addFavLbl
             // 
@@ -230,55 +208,110 @@ namespace sebduruz_Index_FormTestProject
             this.addFavLbl.TabIndex = 21;
             this.addFavLbl.Text = "Ajouter aux favoris";
             // 
-            // label4
+            // pathLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 13);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "chemin d\'accès \\ Page web (URL)";
+            this.pathLabel.AutoSize = true;
+            this.pathLabel.Location = new System.Drawing.Point(14, 39);
+            this.pathLabel.Name = "pathLabel";
+            this.pathLabel.Size = new System.Drawing.Size(167, 13);
+            this.pathLabel.TabIndex = 22;
+            this.pathLabel.Text = "Dossier source \\ Page web (URL)";
             // 
             // outputBox
             // 
             this.outputBox.Location = new System.Drawing.Point(14, 91);
             this.outputBox.Name = "outputBox";
-            this.outputBox.Size = new System.Drawing.Size(677, 530);
+            this.outputBox.Size = new System.Drawing.Size(677, 514);
             this.outputBox.TabIndex = 23;
             this.outputBox.Text = "";
+            // 
+            // openFolderPictureBox
+            // 
+            this.openFolderPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.openFolderPictureBox.Image = global::sebduruz_Index_FormTestProject.Properties.Resources.folderIconSimple;
+            this.openFolderPictureBox.Location = new System.Drawing.Point(17, 55);
+            this.openFolderPictureBox.Name = "openFolderPictureBox";
+            this.openFolderPictureBox.Size = new System.Drawing.Size(33, 30);
+            this.openFolderPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.openFolderPictureBox.TabIndex = 24;
+            this.openFolderPictureBox.TabStop = false;
+            this.openFolderPictureBox.Click += new System.EventHandler(this.OpenFolderPictureBox_Click);
+            // 
+            // favoritePictureBox
+            // 
+            this.favoritePictureBox.Location = new System.Drawing.Point(780, 474);
+            this.favoritePictureBox.Name = "favoritePictureBox";
+            this.favoritePictureBox.Size = new System.Drawing.Size(81, 70);
+            this.favoritePictureBox.TabIndex = 20;
+            this.favoritePictureBox.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cancelButton);
+            this.groupBox1.Controls.Add(this.filtersTextBox);
+            this.groupBox1.Controls.Add(this.searchButton);
+            this.groupBox1.Location = new System.Drawing.Point(727, 152);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(303, 204);
+            this.groupBox1.TabIndex = 25;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtrer les résultats";
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.BackColor = System.Drawing.Color.Tomato;
+            this.cancelButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cancelButton.Location = new System.Drawing.Point(165, 141);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(115, 34);
+            this.cancelButton.TabIndex = 19;
+            this.cancelButton.Text = "Annuler";
+            this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Visible = false;
+            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // nbOfResultsLabel
+            // 
+            this.nbOfResultsLabel.AutoSize = true;
+            this.nbOfResultsLabel.Location = new System.Drawing.Point(17, 608);
+            this.nbOfResultsLabel.Name = "nbOfResultsLabel";
+            this.nbOfResultsLabel.Size = new System.Drawing.Size(121, 13);
+            this.nbOfResultsLabel.TabIndex = 26;
+            this.nbOfResultsLabel.Text = "Nombres de résultats : 0";
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 633);
+            this.Controls.Add(this.nbOfResultsLabel);
+            this.Controls.Add(this.openFolderPictureBox);
             this.Controls.Add(this.outputBox);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.pathLabel);
             this.Controls.Add(this.addFavLbl);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.favoritePictureBox);
             this.Controls.Add(this.execButton);
             this.Controls.Add(this.webRadio);
             this.Controls.Add(this.filesRadio);
             this.Controls.Add(this.pathTextBox);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.menuStrip);
+            this.Controls.Add(this.groupBox1);
+            this.MainMenuStrip = this.menuStrip;
             this.Name = "MainView";
             this.Text = "Test indexation";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.openFolderPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.favoritePictureBox)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem favorisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeFavorisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
@@ -292,15 +325,17 @@ namespace sebduruz_Index_FormTestProject
         private System.Windows.Forms.RadioButton filesRadio;
         private System.Windows.Forms.RadioButton webRadio;
         private System.Windows.Forms.Button execButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.TextBox filtersTextBox;
+        private System.Windows.Forms.PictureBox favoritePictureBox;
         private System.Windows.Forms.Label addFavLbl;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label pathLabel;
         private System.Windows.Forms.RichTextBox outputBox;
+        private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.PictureBox openFolderPictureBox;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Label nbOfResultsLabel;
     }
 }
 

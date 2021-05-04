@@ -15,8 +15,10 @@ namespace sebduruz_Index_FormTestProject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            // Instanciation of the main controler
             Controller ctrler = new Controller();
 
+            // Run the program from MainView
             ctrler.RunMainView();
         }
     }

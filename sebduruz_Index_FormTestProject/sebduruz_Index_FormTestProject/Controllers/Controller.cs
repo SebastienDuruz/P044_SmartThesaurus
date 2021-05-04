@@ -79,5 +79,19 @@ namespace sebduruz_Index_FormTestProject.Controllers
                 return null;
             }
         }
+
+        /// <summary>
+        /// Split the filters given by user
+        /// </summary>
+        /// <param name="filter">The full string containing filters</param>
+        /// <returns>String array containing splited filters</returns>
+        public string[] SplitFilters(string filter)
+        {
+            //Remove spaces
+            filter = filter.Replace(" ", "");
+
+            //Return the splited filters
+            return filter.Split(';');
+        }
     }
 }
