@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\folderIconSimple.png" />
+    <None Include="Ressources\filledStar.png" />
     <Content Include="Ressources\help_icon.jpg" />
   </ItemGroup>
   <ItemGroup />
