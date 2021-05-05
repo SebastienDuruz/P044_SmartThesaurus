@@ -50,15 +50,15 @@ namespace sebduruz_Index_FormTestProject
             this.pathLabel = new System.Windows.Forms.Label();
             this.outputBox = new System.Windows.Forms.RichTextBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.openFolderPictureBox = new System.Windows.Forms.PictureBox();
-            this.favoritePictureBox = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cancelButton = new System.Windows.Forms.Button();
             this.nbOfResultsLabel = new System.Windows.Forms.Label();
+            this.openFolderPictureBox = new System.Windows.Forms.PictureBox();
+            this.favoritePictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.openFolderPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.favoritePictureBox)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -159,6 +159,7 @@ namespace sebduruz_Index_FormTestProject
             this.filesRadio.TabStop = true;
             this.filesRadio.Text = "Fichiers";
             this.filesRadio.UseVisualStyleBackColor = true;
+            this.filesRadio.CheckedChanged += new System.EventHandler(this.FilesRadio_CheckedChanged);
             // 
             // webRadio
             // 
@@ -225,26 +226,6 @@ namespace sebduruz_Index_FormTestProject
             this.outputBox.TabIndex = 23;
             this.outputBox.Text = "";
             // 
-            // openFolderPictureBox
-            // 
-            this.openFolderPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.openFolderPictureBox.Image = global::sebduruz_Index_FormTestProject.Properties.Resources.folderIconSimple;
-            this.openFolderPictureBox.Location = new System.Drawing.Point(17, 55);
-            this.openFolderPictureBox.Name = "openFolderPictureBox";
-            this.openFolderPictureBox.Size = new System.Drawing.Size(33, 30);
-            this.openFolderPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.openFolderPictureBox.TabIndex = 24;
-            this.openFolderPictureBox.TabStop = false;
-            this.openFolderPictureBox.Click += new System.EventHandler(this.OpenFolderPictureBox_Click);
-            // 
-            // favoritePictureBox
-            // 
-            this.favoritePictureBox.Location = new System.Drawing.Point(780, 474);
-            this.favoritePictureBox.Name = "favoritePictureBox";
-            this.favoritePictureBox.Size = new System.Drawing.Size(81, 70);
-            this.favoritePictureBox.TabIndex = 20;
-            this.favoritePictureBox.TabStop = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cancelButton);
@@ -279,6 +260,28 @@ namespace sebduruz_Index_FormTestProject
             this.nbOfResultsLabel.TabIndex = 26;
             this.nbOfResultsLabel.Text = "Nombres de résultats : 0";
             // 
+            // openFolderPictureBox
+            // 
+            this.openFolderPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.openFolderPictureBox.Image = global::sebduruz_Index_FormTestProject.Properties.Resources.folderIconSimple;
+            this.openFolderPictureBox.Location = new System.Drawing.Point(17, 55);
+            this.openFolderPictureBox.Name = "openFolderPictureBox";
+            this.openFolderPictureBox.Size = new System.Drawing.Size(33, 30);
+            this.openFolderPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.openFolderPictureBox.TabIndex = 24;
+            this.openFolderPictureBox.TabStop = false;
+            this.openFolderPictureBox.Click += new System.EventHandler(this.OpenFolderPictureBox_Click);
+            // 
+            // favoritePictureBox
+            // 
+            this.favoritePictureBox.Image = global::sebduruz_Index_FormTestProject.Properties.Resources.filledStar;
+            this.favoritePictureBox.Location = new System.Drawing.Point(780, 474);
+            this.favoritePictureBox.Name = "favoritePictureBox";
+            this.favoritePictureBox.Size = new System.Drawing.Size(81, 70);
+            this.favoritePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.favoritePictureBox.TabIndex = 20;
+            this.favoritePictureBox.TabStop = false;
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -301,10 +304,10 @@ namespace sebduruz_Index_FormTestProject
             this.Text = "Test indexation";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.openFolderPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.favoritePictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.openFolderPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.favoritePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

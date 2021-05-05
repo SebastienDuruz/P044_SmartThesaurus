@@ -216,5 +216,20 @@ namespace sebduruz_Index_FormTestProject
             // Hide cancel button
             this.cancelButton.Visible = false;
         }
+
+        /// <summary>
+        /// Switch the ability to access File explorer
+        /// </summary>
+        private void FilesRadio_CheckedChanged(object sender, System.EventArgs e)
+        {
+            if(this.filesRadio.Checked)
+            {
+                this.openFolderPictureBox.Enabled = true;
+            }
+            else
+            {
+                this.openFolderPictureBox.Enabled = false;
+            }
+        }
     }
 }

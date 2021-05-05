@@ -63,6 +63,16 @@ namespace sebduruz_Index_FormTestProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap filledStar {
+            get {
+                object obj = ResourceManager.GetObject("filledStar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap folderIconSimple {
             get {
                 object obj = ResourceManager.GetObject("folderIconSimple", resourceCulture);
