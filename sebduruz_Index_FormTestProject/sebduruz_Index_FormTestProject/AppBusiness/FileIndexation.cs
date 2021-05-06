@@ -3,6 +3,8 @@
 /// Date : 02.05.2021
 /// Description : Manipulation of indexation from Microsoft libraries. Use of Singleton principle
 
+using sebduruz_Index_FormTestProject.Models;
+using sebduruz_Index_FormTestProject.Models.ObjectsIndex;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,7 +21,7 @@ namespace sebduruz_Index_FormTestProject.AppBusiness
         /// Class Properties
         /// </summary>
         public string SourcePath { get; set; }
-        public List<string> Files { get; set; }
+        public List<IObjectsIndex> IndexationContent { get; set; }
         private static FileIndexation Instance { get; set; }
 
         /// <summary>
@@ -29,7 +31,7 @@ namespace sebduruz_Index_FormTestProject.AppBusiness
         private FileIndexation(string sourcePath)
         {
             this.SourcePath = sourcePath;
-            this.Files = new List<string>();
+            this.IndexationContent = new List<IObjectsIndex>();
         }
 
         /// <summary>
@@ -81,12 +83,18 @@ namespace sebduruz_Index_FormTestProject.AppBusiness
             // Process the list of files found in the directory.
             string[] fileEntries = Directory.GetFiles(targetDirectory);
             foreach (string fileName in fileEntries)
-                Files.Add(ProcessFile(fileName));
+            {
+                this.IndexationContent.Add(new IndexedFile(targetDirectory, ProcessFile(fileName)));
+            }
 
             // Recurse into subdirectories of this directory.
             string[] subdirectoryEntries = Directory.GetDirectories(targetDirectory);
             foreach (string subdirectory in subdirectoryEntries)
+            {
+                string[] splited = subdirectory.Split('\\');
+                this.IndexationContent.Add(new IndexedFolder(targetDirectory, splited[splited.Count()-1]));
                 ProcessDirectory(subdirectory);
+            }
         }
 
         /// <summary>

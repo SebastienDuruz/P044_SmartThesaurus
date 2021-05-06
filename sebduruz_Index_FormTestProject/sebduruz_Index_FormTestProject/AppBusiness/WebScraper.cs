@@ -4,6 +4,7 @@
 /// Description : A basic project to test Web scraping.
 ///               Inspired by https://www.dotnetperls.com/scraping-html for the creation of WebsiteIndexer Class.
 
+using sebduruz_Index_FormTestProject.Models.ObjectsIndex;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -19,12 +20,13 @@ namespace sebduruz_Index_FormTestProject.AppBusiness
         /// <summary>
         /// Class Atributs
         /// </summary>
-        private WebClient _client;
+        private readonly WebClient _client;
 
         /// <summary>
         /// Class Properties
         /// </summary>
-        public List<string> Links { get; set; }
+        public List<IObjectsIndex> Links { get; set; }
+        private string Url { get; set; }
         private static WebScraper Instance { get; set; }
 
         /// <summary>
@@ -34,7 +36,7 @@ namespace sebduruz_Index_FormTestProject.AppBusiness
         {
             this._client = new WebClient();
             this._client.Headers.Add("User-Agent", "C# console program");
-            this.Links = new List<string>();
+            this.Links = new List<IObjectsIndex>();
         }
 
         /// <summary>
@@ -58,6 +60,8 @@ namespace sebduruz_Index_FormTestProject.AppBusiness
         /// <returns>A string containing the page data</returns>
         public string GetHtmlContent(string url)
         {
+            this.Url = url;
+
             //Try to get content from given URL
             try
             {
@@ -92,7 +96,7 @@ namespace sebduruz_Index_FormTestProject.AppBusiness
                     //Keep only full links (start with http)
                     if (m2.Groups[1].Value.StartsWith("http"))
                     {
-                        this.Links.Add(m2.Groups[1].Value);
+                        this.Links.Add(new IndexedLink(this.Url, m2.Groups[1].Value));
                     }
                 }
             }

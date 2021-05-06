@@ -4,6 +4,7 @@
 /// Description : The main controller of the application
 
 using sebduruz_Index_FormTestProject.AppBusiness;
+using sebduruz_Index_FormTestProject.Models.ObjectsIndex;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -17,7 +18,7 @@ namespace sebduruz_Index_FormTestProject.Controllers
         /// <summary>
         /// Class Atributs
         /// </summary>
-        private MainView _mainView = new MainView();
+        private readonly MainView _mainView = new MainView();
 
         /// <summary>
         /// Class Properties
@@ -46,14 +47,14 @@ namespace sebduruz_Index_FormTestProject.Controllers
         /// </summary>
         /// <param name="path">The path where to start indexation</param>
         /// <returns>List of files indexed</returns>
-        public List<string> GetFilesFromIndexation(string path)
+        public List<IObjectsIndex> GetFilesFromIndexation(string path)
         {
             //Get the instance and start indexing
             this.FileIndexer = FileIndexation.GetInstance(path);
             this.FileIndexer.ExecIndexation();
 
             //Return the results
-            return this.FileIndexer.Files;
+            return this.FileIndexer.IndexationContent;
         }
 
         /// <summary>
@@ -61,7 +62,7 @@ namespace sebduruz_Index_FormTestProject.Controllers
         /// </summary>
         /// <param name="webPage">The webpage to search for links</param>
         /// <returns>List of links got from webScraper</returns>
-        public List<string> GetLinksFromWebScraper(string webPagePath)
+        public List<IObjectsIndex> GetLinksFromWebScraper(string webPagePath)
         {
             //Get the instance and Get links from page
             this.WebScraper = WebScraper.GetInstance();
@@ -70,14 +71,10 @@ namespace sebduruz_Index_FormTestProject.Controllers
             if(webPageContent != null)
             {
                 this.WebScraper.FindLinks(webPageContent);
+            }
 
-                //Return the results
-                return this.WebScraper.Links;
-            }
-            else
-            {
-                return null;
-            }
+            //Return the results
+            return this.WebScraper.Links;
         }
 
         /// <summary>

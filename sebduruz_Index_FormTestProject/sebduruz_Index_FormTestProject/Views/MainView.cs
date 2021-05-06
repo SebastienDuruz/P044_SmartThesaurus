@@ -4,6 +4,7 @@
 /// Description : The main view of the application
 
 using sebduruz_Index_FormTestProject.Controllers;
+using sebduruz_Index_FormTestProject.Models.ObjectsIndex;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
@@ -16,8 +17,8 @@ namespace sebduruz_Index_FormTestProject
         /// Class Properties
         /// </summary>
         public Controller Ctrler { get; set; }
-        public List<string> Results { get; set; }
-        public List<string> FilteredResults { get; set; }
+        public List<IObjectsIndex> Results { get; set; }
+        public List<IObjectsIndex> FilteredResults { get; set; }
 
         /// <summary>
         /// Default Constructor
@@ -25,8 +26,8 @@ namespace sebduruz_Index_FormTestProject
         public MainView()
         {
             InitializeComponent();
-            this.Results = new List<string>();
-            this.FilteredResults = new List<string>();
+            this.Results = new List<IObjectsIndex>();
+            this.FilteredResults = new List<IObjectsIndex>();
             this.toolTip.SetToolTip(this.pathLabel, @"Veuillez entrer un chemin d'accès ou une page web. (Exemples [C:\Users\USERNAME\Documents] [https://fr.wikipedia.org/])  ");
         }
 
@@ -59,7 +60,7 @@ namespace sebduruz_Index_FormTestProject
             //If nothing returned show error message to user
             else
             {
-                this.ShowMessageBox("Aucun résultats, veuillez contrôler votre saisie. Le dossier est il vide ?");
+                this.ShowMessageBox("Aucun résultats, veuillez contrôler votre saisie.");
             }
         }
 
@@ -68,16 +69,16 @@ namespace sebduruz_Index_FormTestProject
         /// </summary>
         private void PrintResultsContent()
         {
-            //Clear the content
-            this.outputBox.Text = "";
+            //Reset the output list before doing anything
+            ResetOutputList();
 
             //If filteredResult list empty print result list, else print filteredResult list
-            if(this.FilteredResults.Count == 0)
+            if (this.FilteredResults.Count == 0)
             {
                 //Print the results
-                foreach (string result in this.Results)
+                foreach (IObjectsIndex result in this.Results)
                 {
-                    this.outputBox.Text += $"{result}\n";
+                    this.outputListBox.Items.Add(new ListViewItem(new string[]{result.Type, result.Name, result.Path}));
                 }
 
                 //Print numbers of results
@@ -88,9 +89,9 @@ namespace sebduruz_Index_FormTestProject
                 this.cancelButton.Visible = true;
 
                 //Print the results with filters
-                foreach (string filteredResult in this.FilteredResults)
+                foreach (IObjectsIndex filteredResult in this.FilteredResults)
                 {
-                    this.outputBox.Text += $"{filteredResult}\n";
+                    this.outputListBox.Items.Add(new ListViewItem(new string[] { filteredResult.Type, filteredResult.Name, filteredResult.Path }));
                 }
 
                 //Print numbers of results after filters applied
@@ -134,17 +135,17 @@ namespace sebduruz_Index_FormTestProject
                 try
                 {
                     //Open (create if needed) the file and write Results into it. Always .txt file
-                    using (StreamWriter writer = File.CreateText($"{fileDialog.FileName}.{fileDialog.DefaultExt}")) 
-                    { 
-                        foreach(string result in this.Results)
+                    using (StreamWriter writer = File.CreateText($"{fileDialog.FileName}")) 
+                    {
+                        foreach(ListViewItem result in this.outputListBox.Items)
                         {
-                            writer.WriteLine(result);
+                            writer.WriteLine($"{result.SubItems[0].Text} | {result.SubItems[1].Text} | {result.SubItems[2].Text}");
                         }
                     };   
                 }
                 catch
                 {
-                    ShowMessageBox("Le fichier choisi n'a pas pu être ouvert. Veuillez verifier que celui-ci ne soit pas ouvert puis réessayer.");
+                    ShowMessageBox("Le fichier choisi n'a pas pu être ouvert. Veuillez verifier que celui-ci ne soit pas utilisé par un autre processus et réessayer.");
                 }
             }
         }
@@ -155,15 +156,16 @@ namespace sebduruz_Index_FormTestProject
         private void OpenFolderPictureBox_Click(object sender, System.EventArgs e)
         {
             //Open File dialog to user
-            OpenFileDialog fileDialog = new OpenFileDialog();
-
-            fileDialog.ValidateNames = false;
-            fileDialog.CheckFileExists = false;
-            fileDialog.CheckPathExists = true;
-            fileDialog.FileName = "Dossier source";
+            OpenFileDialog fileDialog = new OpenFileDialog
+            {
+                ValidateNames = false,
+                CheckFileExists = false,
+                CheckPathExists = true,
+                FileName = "Dossier source"
+            };
 
             // User press OK, set path to the path textbox
-            if(fileDialog.ShowDialog() == DialogResult.OK)
+            if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 this.pathTextBox.Text = Path.GetDirectoryName(fileDialog.FileName);
             }
@@ -179,15 +181,18 @@ namespace sebduruz_Index_FormTestProject
             
             //Clear the actual list and add to filtered results if match found
             this.FilteredResults.Clear();
+
+            //Check each filters
             foreach(string filter in filters)
             {
                 //if filter is not empty space
                 if(filter.Trim(' ') != "")
                 {
-                    foreach (string result in Results)
+                    // Check all objects in Results list
+                    foreach (IObjectsIndex result in Results)
                     {
-                        //The result string contains the filter and not alrealy inside filtered list, add it to lists
-                        if (result.Contains(filter) && this.FilteredResults.Contains(result) == false)
+                        //The name contains and not alrealy inside filtered list
+                        if(result.Name.Contains(filter) && !this.FilteredResults.Contains(result))
                         {
                             this.FilteredResults.Add(result);
                         }
@@ -198,6 +203,7 @@ namespace sebduruz_Index_FormTestProject
             //Print the results
             this.PrintResultsContent();
 
+            //Nothing as been found
             if(this.FilteredResults.Count == 0)
             {
                 this.ShowMessageBox("Aucun résultat n'a été trouvé avec ces filtres.");
@@ -230,6 +236,18 @@ namespace sebduruz_Index_FormTestProject
             {
                 this.openFolderPictureBox.Enabled = false;
             }
+        }
+
+        /// <summary>
+        /// Empty and reset settings of the output box
+        /// </summary>
+        private void ResetOutputList()
+        {
+            this.outputListBox.Clear();
+            this.outputListBox.Columns.Add("Type", 50);
+            this.outputListBox.Columns.Add("Nom", 250);
+            this.outputListBox.Columns.Add("Source", 400);
+            this.outputListBox.AllowColumnReorder = true;
         }
     }
 }

@@ -48,13 +48,16 @@ namespace sebduruz_Index_FormTestProject
             this.filtersTextBox = new System.Windows.Forms.TextBox();
             this.addFavLbl = new System.Windows.Forms.Label();
             this.pathLabel = new System.Windows.Forms.Label();
-            this.outputBox = new System.Windows.Forms.RichTextBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cancelButton = new System.Windows.Forms.Button();
             this.nbOfResultsLabel = new System.Windows.Forms.Label();
             this.openFolderPictureBox = new System.Windows.Forms.PictureBox();
             this.favoritePictureBox = new System.Windows.Forms.PictureBox();
+            this.outputListBox = new System.Windows.Forms.ListView();
+            this.resultType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.resultName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.resultPath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.openFolderPictureBox)).BeginInit();
@@ -218,14 +221,6 @@ namespace sebduruz_Index_FormTestProject
             this.pathLabel.TabIndex = 22;
             this.pathLabel.Text = "Dossier source \\ Page web (URL)";
             // 
-            // outputBox
-            // 
-            this.outputBox.Location = new System.Drawing.Point(14, 91);
-            this.outputBox.Name = "outputBox";
-            this.outputBox.Size = new System.Drawing.Size(677, 514);
-            this.outputBox.TabIndex = 23;
-            this.outputBox.Text = "";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cancelButton);
@@ -282,14 +277,45 @@ namespace sebduruz_Index_FormTestProject
             this.favoritePictureBox.TabIndex = 20;
             this.favoritePictureBox.TabStop = false;
             // 
+            // outputListBox
+            // 
+            this.outputListBox.AllowColumnReorder = true;
+            this.outputListBox.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.resultType,
+            this.resultName,
+            this.resultPath});
+            this.outputListBox.GridLines = true;
+            this.outputListBox.HideSelection = false;
+            this.outputListBox.Location = new System.Drawing.Point(14, 91);
+            this.outputListBox.Name = "outputListBox";
+            this.outputListBox.Size = new System.Drawing.Size(677, 514);
+            this.outputListBox.TabIndex = 27;
+            this.outputListBox.UseCompatibleStateImageBehavior = false;
+            this.outputListBox.View = System.Windows.Forms.View.Details;
+            // 
+            // resultType
+            // 
+            this.resultType.Text = "Type";
+            this.resultType.Width = 75;
+            // 
+            // resultName
+            // 
+            this.resultName.Text = "Nom";
+            this.resultName.Width = 200;
+            // 
+            // resultPath
+            // 
+            this.resultPath.Text = "Source";
+            this.resultPath.Width = 400;
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 633);
+            this.Controls.Add(this.outputListBox);
             this.Controls.Add(this.nbOfResultsLabel);
             this.Controls.Add(this.openFolderPictureBox);
-            this.Controls.Add(this.outputBox);
             this.Controls.Add(this.pathLabel);
             this.Controls.Add(this.addFavLbl);
             this.Controls.Add(this.favoritePictureBox);
@@ -333,12 +359,15 @@ namespace sebduruz_Index_FormTestProject
         private System.Windows.Forms.PictureBox favoritePictureBox;
         private System.Windows.Forms.Label addFavLbl;
         private System.Windows.Forms.Label pathLabel;
-        private System.Windows.Forms.RichTextBox outputBox;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.PictureBox openFolderPictureBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Label nbOfResultsLabel;
+        private System.Windows.Forms.ListView outputListBox;
+        private System.Windows.Forms.ColumnHeader resultType;
+        private System.Windows.Forms.ColumnHeader resultName;
+        private System.Windows.Forms.ColumnHeader resultPath;
     }
 }
 
