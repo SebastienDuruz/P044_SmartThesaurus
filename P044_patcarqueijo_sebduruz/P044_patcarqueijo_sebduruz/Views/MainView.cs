@@ -6,6 +6,7 @@
 using P044_patcarqueijo_sebduruz.Controllers;
 using P044_patcarqueijo_sebduruz.Resources.ObjectsIndex;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -20,8 +21,9 @@ namespace P044_patcarqueijo_sebduruz
         /// Class Properties
         /// </summary>
         public MainController Ctrler { get; set; }
-        public List<IndexedObject> Results { get; set; }
-        public List<IndexedObject> FilteredResults { get; set; }
+        private List<IndexedObject> Results { get; set; }
+        private List<IndexedObject> FilteredResults { get; set; }
+        private ImageList IconsList { get; set; }
 
         /// <summary>
         /// Default Constructor
@@ -33,6 +35,7 @@ namespace P044_patcarqueijo_sebduruz
             this.FilteredResults = new List<IndexedObject>();
             this.toolTip.SetToolTip(this.pathLabel, @"Veuillez entrer un chemin d'accès ou une page web. (Exemples [C:\Users\USERNAME\Documents] [https://fr.wikipedia.org/])  ");
             this.toolTip.SetToolTip(this.filterHelpPictureBox, "Combiner les filtres avec l'ajout du caractère [:] entre chaque filtre\n Nouveau filtres avec l'ajout du caractère [|]");
+            this.GetImagesFromResource();
         }
 
         /// <summary>
@@ -82,7 +85,18 @@ namespace P044_patcarqueijo_sebduruz
                 //Print the results
                 foreach (IndexedObject result in this.Results)
                 {
-                    this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }));
+                    if(result.Type == "Dossier")
+                    {
+                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 0));
+                    }
+                    else if(result.Type == "Fichier")
+                    {
+                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 1));
+                    }
+                    else
+                    {
+                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 2));
+                    }
                 }
 
                 //Print numbers of results
@@ -230,10 +244,25 @@ namespace P044_patcarqueijo_sebduruz
         private void ResetOutputList()
         {
             this.outputListBox.Clear();
-            this.outputListBox.Columns.Add("Type", 50);
+            this.outputListBox.Columns.Add("Type", 75);
             this.outputListBox.Columns.Add("Nom", 250);
-            this.outputListBox.Columns.Add("Source", 400);
+            this.outputListBox.Columns.Add("Source", 450);
             this.outputListBox.AllowColumnReorder = true;
+            this.outputListBox.FullRowSelect = true;
+            this.outputListBox.MultiSelect = false;
+            this.outputListBox.SmallImageList = this.IconsList;
+        }
+
+        /// <summary>
+        /// Get the images from resource file (used for showing icons with results)
+        /// </summary>
+        private void GetImagesFromResource()
+        {
+            this.IconsList = new ImageList();
+            this.IconsList.ImageSize = new Size(25, 25);
+            this.IconsList.Images.Add((Image)Resources.Images.folder_gray);
+            this.IconsList.Images.Add((Image)Resources.Images.document_open);
+            this.IconsList.Images.Add((Image)Resources.Images.emblem_symbolic_link);
         }
     }
 }

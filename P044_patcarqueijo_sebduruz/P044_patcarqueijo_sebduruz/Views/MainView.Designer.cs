@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fichiersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ouvrirDansLexplorateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -147,7 +146,7 @@
             // pathTextBox
             // 
             this.pathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pathTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.pathTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.pathTextBox.Location = new System.Drawing.Point(62, 63);
             this.pathTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pathTextBox.Multiline = true;
@@ -249,7 +248,7 @@
             // 
             // filterHelpPictureBox
             // 
-            this.filterHelpPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("filterHelpPictureBox.Image")));
+            this.filterHelpPictureBox.Image = global::P044_patcarqueijo_sebduruz.Resources.Images.help_icon;
             this.filterHelpPictureBox.Location = new System.Drawing.Point(296, 17);
             this.filterHelpPictureBox.Name = "filterHelpPictureBox";
             this.filterHelpPictureBox.Size = new System.Drawing.Size(30, 28);
@@ -284,7 +283,7 @@
             // openFolderPictureBox
             // 
             this.openFolderPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.openFolderPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("openFolderPictureBox.Image")));
+            this.openFolderPictureBox.Image = global::P044_patcarqueijo_sebduruz.Resources.Images.folder_blue;
             this.openFolderPictureBox.Location = new System.Drawing.Point(16, 63);
             this.openFolderPictureBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.openFolderPictureBox.Name = "openFolderPictureBox";
@@ -296,7 +295,7 @@
             // 
             // favoritePictureBox
             // 
-            this.favoritePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("favoritePictureBox.Image")));
+            this.favoritePictureBox.Image = global::P044_patcarqueijo_sebduruz.Resources.Images.filledStar;
             this.favoritePictureBox.Location = new System.Drawing.Point(947, 562);
             this.favoritePictureBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.favoritePictureBox.Name = "favoritePictureBox";
@@ -342,6 +341,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1230, 730);
+            this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.outputListBox);
             this.Controls.Add(this.nbOfResultsLabel);
             this.Controls.Add(this.openFolderPictureBox);
@@ -352,12 +352,11 @@
             this.Controls.Add(this.webRadio);
             this.Controls.Add(this.filesRadio);
             this.Controls.Add(this.pathTextBox);
-            this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.groupBox1);
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MainView";
-            this.Text = "Test indexation";
+            this.Text = "Indexator";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.groupBox1.ResumeLayout(false);

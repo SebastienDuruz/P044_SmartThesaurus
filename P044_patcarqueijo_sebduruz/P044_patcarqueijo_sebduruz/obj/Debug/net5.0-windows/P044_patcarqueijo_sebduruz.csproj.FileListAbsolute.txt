@@ -17,3 +17,4 @@ C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebdu
 C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.genruntimeconfig.cache
 C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.Properties.Resources.resources
 C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.MainView.resources
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.Resources.Images.resources

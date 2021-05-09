@@ -4,8 +4,10 @@
 /// Description : The main controller of the application
 
 using P044_patcarqueijo_sebduruz.AppBusiness;
+using P044_patcarqueijo_sebduruz.Models;
 using P044_patcarqueijo_sebduruz.Resources.ObjectsIndex;
 using System.Collections.Generic;
+using System.Resources;
 using System.Windows.Forms;
 
 namespace P044_patcarqueijo_sebduruz.Controllers
@@ -22,6 +24,7 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         /// Class Atributs
         /// </summary>
         private readonly MainView _mainView = new MainView();
+        private readonly Model _model = new Model();
 
         /// <summary>
         /// Class Properties
