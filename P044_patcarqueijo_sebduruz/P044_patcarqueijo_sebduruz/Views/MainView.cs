@@ -6,6 +6,7 @@
 using P044_patcarqueijo_sebduruz.Controllers;
 using P044_patcarqueijo_sebduruz.Resources.ObjectsIndex;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -82,22 +83,7 @@ namespace P044_patcarqueijo_sebduruz
             //If filteredResult list empty print result list, else print filteredResult list
             if (this.FilteredResults.Count == 0)
             {
-                //Print the results
-                foreach (IndexedObject result in this.Results)
-                {
-                    if(result.Type == "Dossier")
-                    {
-                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 0));
-                    }
-                    else if(result.Type == "Fichier")
-                    {
-                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 1));
-                    }
-                    else
-                    {
-                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 2));
-                    }
-                }
+                this.ListBoxPrinter(this.Results);
 
                 //Print numbers of results
                 this.nbOfResultsLabel.Text = $"Nombres de résultats : [{this.Results.Count}]";
@@ -106,14 +92,34 @@ namespace P044_patcarqueijo_sebduruz
             {
                 this.cancelButton.Visible = true;
 
-                //Print the results with filters
-                foreach (IndexedObject filteredResult in this.FilteredResults)
-                {
-                    this.outputListBox.Items.Add(new ListViewItem(new string[] { filteredResult.Type, filteredResult.Name, filteredResult.Path }));
-                }
+                this.ListBoxPrinter(this.FilteredResults);
 
                 //Print numbers of results after filters applied
                 this.nbOfResultsLabel.Text = $"Nombres de résultats : [{this.FilteredResults.Count}]";
+            }
+        }
+
+        /// <summary>
+        /// Print IndexedOBject to outputBox
+        /// </summary>
+        /// <param name="results">The list to print</param>
+        private void ListBoxPrinter(List<IndexedObject> results)
+        {
+            //Foreach objects in the list
+            foreach (IndexedObject result in results)
+            {
+                switch (result.Type)
+                {
+                    case "Dossier":
+                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 0));
+                        break;
+                    case "Fichier":
+                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 1));
+                        break;
+                    case "Lien":
+                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 2));
+                        break;
+                }
             }
         }
 
@@ -132,6 +138,14 @@ namespace P044_patcarqueijo_sebduruz
         private void ExitToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void OpenWithExplorer_Click(object sender, System.EventArgs e)
+        {
+            if (this.outputListBox.SelectedItems.Count > 0)
+            {
+                Process.Start("explorer.exe", this.outputListBox.SelectedItems[0].SubItems[2].Text);
+            }
         }
 
         /// <summary>
@@ -228,13 +242,16 @@ namespace P044_patcarqueijo_sebduruz
         /// </summary>
         private void FilesRadio_CheckedChanged(object sender, System.EventArgs e)
         {
+            //Change icons for better clarity of what user can or can't do
             if (this.filesRadio.Checked)
             {
                 this.openFolderPictureBox.Enabled = true;
+                this.openFolderPictureBox.Image = Resources.Images.folder_blue;
             }
             else
             {
                 this.openFolderPictureBox.Enabled = false;
+                this.openFolderPictureBox.Image = Resources.Images.folder_gray;
             }
         }
 

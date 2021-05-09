@@ -1,4 +1,6 @@
-﻿namespace P044_patcarqueijo_sebduruz
+﻿using System;
+
+namespace P044_patcarqueijo_sebduruz
 {
     partial class MainView
     {
@@ -74,7 +76,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(1230, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1232, 24);
             this.menuStrip.TabIndex = 9;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -91,20 +93,21 @@
             // ouvrirDansLexplorateurToolStripMenuItem
             // 
             this.ouvrirDansLexplorateurToolStripMenuItem.Name = "ouvrirDansLexplorateurToolStripMenuItem";
-            this.ouvrirDansLexplorateurToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.ouvrirDansLexplorateurToolStripMenuItem.Text = "Ouvrir dans l\'explorateur";
+            this.ouvrirDansLexplorateurToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.ouvrirDansLexplorateurToolStripMenuItem.Text = "Ouvrir la sélection";
+            this.ouvrirDansLexplorateurToolStripMenuItem.Click += new System.EventHandler(this.OpenWithExplorer_Click);
             // 
             // exporterToolStripMenuItem
             // 
             this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
-            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.exporterToolStripMenuItem.Text = "Exporter";
             this.exporterToolStripMenuItem.Click += new System.EventHandler(this.ExportDatasToolStripMenuItem_Click);
             // 
             // quitterLapplicationToolStripMenuItem
             // 
             this.quitterLapplicationToolStripMenuItem.Name = "quitterLapplicationToolStripMenuItem";
-            this.quitterLapplicationToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.quitterLapplicationToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.quitterLapplicationToolStripMenuItem.Text = "Quitter";
             this.quitterLapplicationToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -320,6 +323,7 @@
             this.outputListBox.TabIndex = 27;
             this.outputListBox.UseCompatibleStateImageBehavior = false;
             this.outputListBox.View = System.Windows.Forms.View.Details;
+            this.outputListBox.DoubleClick += new System.EventHandler(this.OpenWithExplorer_Click);
             // 
             // resultType
             // 
@@ -340,7 +344,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1230, 730);
+            this.ClientSize = new System.Drawing.Size(1232, 728);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.outputListBox);
             this.Controls.Add(this.nbOfResultsLabel);
@@ -355,6 +359,8 @@
             this.Controls.Add(this.groupBox1);
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximumSize = new System.Drawing.Size(1248, 767);
+            this.MinimumSize = new System.Drawing.Size(1248, 767);
             this.Name = "MainView";
             this.Text = "Indexator";
             this.menuStrip.ResumeLayout(false);
@@ -368,6 +374,8 @@
             this.PerformLayout();
 
         }
+
+        
 
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip;

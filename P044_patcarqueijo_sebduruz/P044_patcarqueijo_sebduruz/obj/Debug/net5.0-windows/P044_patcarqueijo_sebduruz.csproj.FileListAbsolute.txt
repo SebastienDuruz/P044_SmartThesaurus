@@ -5,7 +5,9 @@ C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebdu
 C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\bin\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.dll
 C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\bin\Debug\net5.0-windows\ref\P044_patcarqueijo_sebduruz.dll
 C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\bin\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.pdb
-C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.csprojAssemblyReference.cache
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.Properties.Resources.resources
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.Resources.Images.resources
+C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.MainView.resources
 C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.csproj.GenerateResource.cache
 C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.AssemblyInfoInputs.cache
@@ -15,6 +17,3 @@ C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebdu
 C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\ref\P044_patcarqueijo_sebduruz.dll
 C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.pdb
 C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.genruntimeconfig.cache
-C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.Properties.Resources.resources
-C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.MainView.resources
-C:\Users\Sébastien\Documents\GitHub\P044_SmartThesaurus\P044_patcarqueijo_sebduruz\P044_patcarqueijo_sebduruz\obj\Debug\net5.0-windows\P044_patcarqueijo_sebduruz.Resources.Images.resources
