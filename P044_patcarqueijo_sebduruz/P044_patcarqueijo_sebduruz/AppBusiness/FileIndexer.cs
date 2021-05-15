@@ -79,7 +79,7 @@ namespace P044_patcarqueijo_sebduruz.AppBusiness
         /// Process a directory from path
         /// </summary>
         /// <param name="targetDirectory">The Targeted directory path</param>
-        public void ProcessDirectory(string targetDirectory)
+        private void ProcessDirectory(string targetDirectory)
         {
             List<string> fileEntries = new List<string>();
             bool folderIsAccessible = false;
@@ -97,9 +97,17 @@ namespace P044_patcarqueijo_sebduruz.AppBusiness
 
             if(folderIsAccessible)
             {
+                // Check each file if this is an image or not
                 foreach (string fileName in fileEntries)
                 {
-                    this.IndexationContent.Add(new IndexedObject(targetDirectory, ProcessFile(fileName), "Fichier"));
+                    if(CheckIfFileIsImage(fileName))
+                    {
+                        this.IndexationContent.Add(new IndexedObject(targetDirectory, ProcessFile(fileName), "Image"));
+                    }
+                    else
+                    {
+                        this.IndexationContent.Add(new IndexedObject(targetDirectory, ProcessFile(fileName), "Fichier"));
+                    }
                 }
 
                 // Recurse into subdirectories of this directory.
@@ -117,10 +125,32 @@ namespace P044_patcarqueijo_sebduruz.AppBusiness
         /// Process a file
         /// </summary>
         /// <param name="path">The path to process</param>
-        public static string ProcessFile(string path)
+        private static string ProcessFile(string path)
         {
             string[] parts = path.Split('\\');
             return parts[parts.Count() - 1];
+        }
+
+        /// <summary>
+        /// Check if file is an image or PDF
+        /// </summary>
+        /// <param name="fileName">The file to check</param>
+        /// <returns>True if file is an image, false if not</returns>
+        private static bool CheckIfFileIsImage(string fileName)
+        {
+            string lowerFileName = fileName.ToLower();
+            string[] imagesExtensions = { ".jpg", ".png", ".bmp", ".jpeg", ".gif", ".tiff", ".pdf" };
+
+            // Check each extensions in the array
+            foreach(string extension in imagesExtensions)
+            {
+                // Return true if extension as been found
+                if(lowerFileName.Contains(extension))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

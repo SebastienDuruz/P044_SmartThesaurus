@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sébastien\\Documents\\GitHub\\P044_SmartThesaurus\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz.csproj": {}
+    "C:\\Users\\Sébastien\\Documents\\Github\\P044_SmartThesaurus\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sébastien\\Documents\\GitHub\\P044_SmartThesaurus\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz.csproj": {
+    "C:\\Users\\Sébastien\\Documents\\Github\\P044_SmartThesaurus\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sébastien\\Documents\\GitHub\\P044_SmartThesaurus\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz.csproj",
+        "projectUniqueName": "C:\\Users\\Sébastien\\Documents\\Github\\P044_SmartThesaurus\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz.csproj",
         "projectName": "P044_patcarqueijo_sebduruz",
-        "projectPath": "C:\\Users\\Sébastien\\Documents\\GitHub\\P044_SmartThesaurus\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz.csproj",
+        "projectPath": "C:\\Users\\Sébastien\\Documents\\Github\\P044_SmartThesaurus\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz.csproj",
         "packagesPath": "C:\\Users\\Sébastien\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sébastien\\Documents\\GitHub\\P044_SmartThesaurus\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz\\obj\\",
+        "outputPath": "C:\\Users\\Sébastien\\Documents\\Github\\P044_SmartThesaurus\\P044_patcarqueijo_sebduruz\\P044_patcarqueijo_sebduruz\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sébastien\\AppData\\Roaming\\NuGet\\NuGet.Config",

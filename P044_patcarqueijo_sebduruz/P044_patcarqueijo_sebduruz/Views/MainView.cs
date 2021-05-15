@@ -113,6 +113,9 @@ namespace P044_patcarqueijo_sebduruz
                     case "Dossier":
                         this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 0));
                         break;
+                    case "Image":
+                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 1));
+                        break;
                     case "Fichier":
                         this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 1));
                         break;
