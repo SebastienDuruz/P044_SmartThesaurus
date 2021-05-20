@@ -284,5 +284,21 @@ namespace P044_patcarqueijo_sebduruz
             this.IconsList.Images.Add((Image)Resources.Images.document_open);
             this.IconsList.Images.Add((Image)Resources.Images.emblem_symbolic_link);
         }
+
+        /// <summary>
+        /// When user focus enter to filterbox, change enter key validation button
+        /// </summary>
+        private void FilterBoxTakeFocus(object sender, System.EventArgs e)
+        {
+            this.AcceptButton = this.searchButton;
+        }
+
+        /// <summary>
+        /// When user LEAVE the filterbox change enter key validation button
+        /// </summary>
+        private void FilterBoxLeaveFocus(object sender, System.EventArgs e)
+        {
+            this.AcceptButton = this.execButton;
+        }
     }
 }

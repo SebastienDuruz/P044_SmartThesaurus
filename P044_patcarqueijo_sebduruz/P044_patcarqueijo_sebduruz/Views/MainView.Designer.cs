@@ -41,10 +41,10 @@ namespace P044_patcarqueijo_sebduruz
             this.pathLabel = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.filterHelpPictureBox = new System.Windows.Forms.PictureBox();
             this.cancelButton = new System.Windows.Forms.Button();
             this.openFolderPictureBox = new System.Windows.Forms.PictureBox();
             this.favoritePictureBox = new System.Windows.Forms.PictureBox();
-            this.filterHelpPictureBox = new System.Windows.Forms.PictureBox();
             this.nbOfResultsLabel = new System.Windows.Forms.Label();
             this.fichiersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ouvrirDansLexplorateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,9 +61,9 @@ namespace P044_patcarqueijo_sebduruz
             this.resultPath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.outputListBox = new System.Windows.Forms.ListView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.filterHelpPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.openFolderPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.favoritePictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filterHelpPictureBox)).BeginInit();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,6 +128,8 @@ namespace P044_patcarqueijo_sebduruz
             this.filtersTextBox.Name = "filtersTextBox";
             this.filtersTextBox.Size = new System.Drawing.Size(259, 78);
             this.filtersTextBox.TabIndex = 18;
+            this.filtersTextBox.Enter += new System.EventHandler(this.FilterBoxTakeFocus);
+            this.filtersTextBox.Leave += new System.EventHandler(this.FilterBoxLeaveFocus);
             // 
             // addFavLbl
             // 
@@ -159,6 +161,16 @@ namespace P044_patcarqueijo_sebduruz
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrer les résultats";
+            // 
+            // filterHelpPictureBox
+            // 
+            this.filterHelpPictureBox.Image = global::P044_patcarqueijo_sebduruz.Properties.Resources.help_icon;
+            this.filterHelpPictureBox.Location = new System.Drawing.Point(254, 15);
+            this.filterHelpPictureBox.Name = "filterHelpPictureBox";
+            this.filterHelpPictureBox.Size = new System.Drawing.Size(26, 24);
+            this.filterHelpPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.filterHelpPictureBox.TabIndex = 28;
+            this.filterHelpPictureBox.TabStop = false;
             // 
             // cancelButton
             // 
@@ -194,16 +206,6 @@ namespace P044_patcarqueijo_sebduruz
             this.favoritePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.favoritePictureBox.TabIndex = 20;
             this.favoritePictureBox.TabStop = false;
-            // 
-            // filterHelpPictureBox
-            // 
-            this.filterHelpPictureBox.Image = global::P044_patcarqueijo_sebduruz.Properties.Resources.help_icon;
-            this.filterHelpPictureBox.Location = new System.Drawing.Point(254, 15);
-            this.filterHelpPictureBox.Name = "filterHelpPictureBox";
-            this.filterHelpPictureBox.Size = new System.Drawing.Size(26, 24);
-            this.filterHelpPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.filterHelpPictureBox.TabIndex = 28;
-            this.filterHelpPictureBox.TabStop = false;
             // 
             // nbOfResultsLabel
             // 
@@ -326,6 +328,7 @@ namespace P044_patcarqueijo_sebduruz
             // 
             // MainView
             // 
+            this.AcceptButton = this.execButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 631);
@@ -348,9 +351,9 @@ namespace P044_patcarqueijo_sebduruz
             this.Text = "Indexator";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.filterHelpPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.openFolderPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.favoritePictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filterHelpPictureBox)).EndInit();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
