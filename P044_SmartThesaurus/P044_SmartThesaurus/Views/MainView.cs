@@ -4,6 +4,7 @@
 /// Description : The main view of the application
 
 using P044_patcarqueijo_sebduruz.Controllers;
+using P044_SmartThesaurus.AppBusiness;
 using P044_SmartThesaurus.Resources.ObjectsIndex;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -64,6 +65,9 @@ namespace P044_SmartThesaurus
             if (this.Results != null && this.Results.Count > 0)
             {
                 this.PrintResultsContent();
+
+                // Path was valid, set it to lastIndex
+                this.Ctrler.SetLastIndexed(this.pathTextBox.Text);
             }
             //If nothing returned show error message to user
             else
@@ -143,11 +147,26 @@ namespace P044_SmartThesaurus
             Application.Exit();
         }
 
-        private void OpenWithExplorer_Click(object sender, System.EventArgs e)
+        /// <summary>
+        /// Open the path
+        /// </summary>
+        private void OpenWithExplorer(object sender, System.EventArgs e)
         {
             if (this.outputListBox.SelectedItems.Count > 0)
             {
-                Process.Start("explorer.exe", this.outputListBox.SelectedItems[0].SubItems[2].Text);
+                switch(this.outputListBox.SelectedItems[0].SubItems[0].Text)
+                {
+                    case "Image":
+                    case "Fichier":
+                        Process.Start("explorer.exe", this.outputListBox.SelectedItems[0].SubItems[2].Text);
+                        break;
+                    case "Dossier":
+                        Process.Start("explorer.exe", $@"{ this.outputListBox.SelectedItems[0].SubItems[2].Text}\{this.outputListBox.SelectedItems[0].SubItems[1].Text}");
+                        break;
+                    case "Lien":
+                        Process.Start("explorer.exe", this.outputListBox.SelectedItems[0].SubItems[1].Text);
+                        break;
+                }
             }
         }
 
@@ -220,7 +239,7 @@ namespace P044_SmartThesaurus
             //Print the results
             this.PrintResultsContent();
 
-            //Nothing as been found
+            // Nothing as been found
             if (this.FilteredResults.Count == 0)
             {
                 this.ShowMessageBox("Aucun résultat n'a été trouvé avec ces filtres.");
@@ -300,6 +319,22 @@ namespace P044_SmartThesaurus
         private void FilterBoxLeaveFocus(object sender, System.EventArgs e)
         {
             this.AcceptButton = this.execButton;
+        }
+
+        /// <summary>
+        /// Set content of the path from controller
+        /// </summary>
+        /// <param name="content">The content to print</param>
+        public void SetContentToPathTextBox(string content)
+        {
+            this.pathTextBox.Text = content;
+            
+            // The content is a link
+            if(content.Contains("http://") || content.Contains("https://"))
+            {
+                this.webRadio.Checked = true;
+                this.filesRadio.Checked = false;
+            }
         }
     }
 }

@@ -8,7 +8,6 @@ using P044_patcarqueijo_sebduruz.Models;
 using P044_SmartThesaurus;
 using P044_SmartThesaurus.Resources.ObjectsIndex;
 using System.Collections.Generic;
-using System.Resources;
 using System.Windows.Forms;
 
 namespace P044_patcarqueijo_sebduruz.Controllers
@@ -46,6 +45,7 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         /// </summary>
         public void RunMainView()
         {
+            this.GetLastIndexed();
             Application.Run(this._mainView);
         }
 
@@ -155,6 +155,19 @@ namespace P044_patcarqueijo_sebduruz.Controllers
 
             //Return the results
             return filteredResults;
+        }
+
+        /// <summary>
+        /// Get last indexed from model
+        /// </summary>
+        public void GetLastIndexed()
+        {
+            this._mainView.SetContentToPathTextBox(this._model.GetLastIndexed());
+        }
+
+        public void SetLastIndexed(string lastIndex)
+        {
+            this._model.SetLastindexed(lastIndex);
         }
     }
 }

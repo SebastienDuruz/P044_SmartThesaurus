@@ -199,7 +199,7 @@ namespace P044_SmartThesaurus
             this.ouvrirDansLexplorateurToolStripMenuItem.Name = "ouvrirDansLexplorateurToolStripMenuItem";
             this.ouvrirDansLexplorateurToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.ouvrirDansLexplorateurToolStripMenuItem.Text = "Ouvrir la sélection";
-            this.ouvrirDansLexplorateurToolStripMenuItem.Click += new System.EventHandler(this.OpenWithExplorer_Click);
+            this.ouvrirDansLexplorateurToolStripMenuItem.Click += new System.EventHandler(this.OpenWithExplorer);
             // 
             // exporterToolStripMenuItem
             // 
@@ -292,7 +292,7 @@ namespace P044_SmartThesaurus
             this.outputListBox.TabIndex = 27;
             this.outputListBox.UseCompatibleStateImageBehavior = false;
             this.outputListBox.View = System.Windows.Forms.View.Details;
-            this.outputListBox.DoubleClick += new System.EventHandler(this.OpenWithExplorer_Click);
+            this.outputListBox.DoubleClick += new System.EventHandler(this.OpenWithExplorer);
             // 
             // openFolderPictureBox
             // 

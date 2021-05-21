@@ -5,6 +5,9 @@
 
 namespace P044_SmartThesaurus.Resources.ObjectsIndex
 {
+    /// <summary>
+    /// Class IndexedObject
+    /// </summary>
     public class IndexedObject
     {
         /// <summary>
