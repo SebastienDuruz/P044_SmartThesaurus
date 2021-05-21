@@ -113,14 +113,14 @@ namespace P044_SmartThesaurus
                     case "Dossier":
                         this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 0));
                         break;
-                    case "Image":
-                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 1));
-                        break;
                     case "Fichier":
                         this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 1));
                         break;
                     case "Lien":
                         this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 2));
+                        break;
+                    case "Image":
+                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 3));
                         break;
                 }
             }
@@ -249,12 +249,12 @@ namespace P044_SmartThesaurus
             if (this.filesRadio.Checked)
             {
                 this.openFolderPictureBox.Enabled = true;
-                this.openFolderPictureBox.Image = Resources.Images.folder_blue;
+                this.openFolderPictureBox.Image = Resources.Icons.folder_blue;
             }
             else
             {
                 this.openFolderPictureBox.Enabled = false;
-                this.openFolderPictureBox.Image = Resources.Images.folder_gray;
+                this.openFolderPictureBox.Image = Resources.Icons.folder_gray;
             }
         }
 
@@ -280,9 +280,10 @@ namespace P044_SmartThesaurus
         {
             this.IconsList = new ImageList();
             this.IconsList.ImageSize = new Size(25, 25);
-            this.IconsList.Images.Add((Image)Resources.Images.folder_gray);
-            this.IconsList.Images.Add((Image)Resources.Images.document_open);
-            this.IconsList.Images.Add((Image)Resources.Images.emblem_symbolic_link);
+            this.IconsList.Images.Add((Image)Resources.Icons.folder_gray);
+            this.IconsList.Images.Add((Image)Resources.Icons.document_open);
+            this.IconsList.Images.Add((Image)Resources.Icons.emblem_symbolic_link);
+            this.IconsList.Images.Add((Image)Resources.Icons.picture_black);
         }
 
         /// <summary>
