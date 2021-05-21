@@ -1,18 +1,16 @@
-/// ETML
-/// Autor : Sébastien Duruz
-/// Date : 08.05.2021
-/// Description : Entry of Winform application.
-
-using P044_patcarqueijo_sebduruz.Controllers;
+ï»¿using P044_patcarqueijo_sebduruz.Controllers;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace P044_patcarqueijo_sebduruz
+namespace P044_SmartThesaurus
 {
     static class Program
     {
         /// <summary>
-        ///  The main entry point for the application.
+        /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()

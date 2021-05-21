@@ -4,14 +4,14 @@
 /// Description : The main view of the application
 
 using P044_patcarqueijo_sebduruz.Controllers;
-using P044_patcarqueijo_sebduruz.Resources.ObjectsIndex;
+using P044_SmartThesaurus.Resources.ObjectsIndex;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace P044_patcarqueijo_sebduruz
+namespace P044_SmartThesaurus
 {
     /// <summary>
     /// Class MainView

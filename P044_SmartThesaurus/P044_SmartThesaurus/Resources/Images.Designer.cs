@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace P044_patcarqueijo_sebduruz.Resources {
+namespace P044_SmartThesaurus.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace P044_patcarqueijo_sebduruz.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("P044_patcarqueijo_sebduruz.Resources.Images", typeof(Images).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("P044_SmartThesaurus.Resources.Images", typeof(Images).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

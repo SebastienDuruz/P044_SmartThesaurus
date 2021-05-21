@@ -12,6 +12,6 @@ namespace P044_patcarqueijo_sebduruz.Models
     /// </summary>
     public class Model
     {
-        
+
     }
 }

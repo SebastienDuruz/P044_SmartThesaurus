@@ -3,7 +3,7 @@
 /// Date : 02.05.2021
 /// Description : Manipulation of indexation from Microsoft libraries. Use of Singleton principle
 
-using P044_patcarqueijo_sebduruz.Resources.ObjectsIndex;
+using P044_SmartThesaurus.Resources.ObjectsIndex;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -95,12 +95,12 @@ namespace P044_patcarqueijo_sebduruz.AppBusiness
                 //TODO : Use the exeption to notify user of the failed folder access
             }
 
-            if(folderIsAccessible)
+            if (folderIsAccessible)
             {
                 // Check each file if this is an image or not
                 foreach (string fileName in fileEntries)
                 {
-                    if(CheckIfFileIsImage(fileName))
+                    if (CheckIfFileIsImage(fileName))
                     {
                         this.IndexationContent.Add(new IndexedObject(targetDirectory, ProcessFile(fileName), "Image"));
                     }
@@ -142,10 +142,10 @@ namespace P044_patcarqueijo_sebduruz.AppBusiness
             string[] imagesExtensions = { ".jpg", ".png", ".bmp", ".jpeg", ".gif", ".tiff", ".pdf" };
 
             // Check each extensions in the array
-            foreach(string extension in imagesExtensions)
+            foreach (string extension in imagesExtensions)
             {
                 // Return true if extension as been found
-                if(lowerFileName.Contains(extension))
+                if (lowerFileName.Contains(extension))
                 {
                     return true;
                 }

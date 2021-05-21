@@ -4,7 +4,7 @@
 /// Description : A basic project to test Web scraping.
 ///               Inspired by https://www.dotnetperls.com/scraping-html for the creation of WebsiteIndexer Class.
 
-using P044_patcarqueijo_sebduruz.Resources.ObjectsIndex;
+using P044_SmartThesaurus.Resources.ObjectsIndex;
 using System.Collections.Generic;
 using System.Net;
 using System.Text.RegularExpressions;
