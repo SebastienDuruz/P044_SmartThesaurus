@@ -6,7 +6,9 @@
 using P044_patcarqueijo_sebduruz.AppBusiness;
 using P044_patcarqueijo_sebduruz.Models;
 using P044_SmartThesaurus;
+using P044_SmartThesaurus.AppBusiness;
 using P044_SmartThesaurus.Resources.ObjectsIndex;
+using P044_SmartThesaurus.Views;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -24,7 +26,9 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         /// Class Atributs
         /// </summary>
         private readonly MainView _mainView = new MainView();
-        private readonly Model _model = new Model();
+        private readonly BookmarkView _bookmarksView = new BookmarkView();
+        private readonly LastIndexed _model = new LastIndexed();
+        private readonly Bookmarks _bookmarks = new Bookmarks();
 
         /// <summary>
         /// Class Properties
@@ -38,6 +42,7 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         public MainController()
         {
             this._mainView.Ctrler = this;
+            this._bookmarksView.Ctrler = this;
         }
 
         /// <summary>
@@ -165,9 +170,51 @@ namespace P044_patcarqueijo_sebduruz.Controllers
             this._mainView.SetContentToPathTextBox(this._model.GetLastIndexed());
         }
 
+        /// <summary>
+        /// Set the last indexed to model
+        /// </summary>
+        /// <param name="lastIndex"></param>
         public void SetLastIndexed(string lastIndex)
         {
             this._model.SetLastindexed(lastIndex);
+        }
+
+        /// <summary>
+        /// Show or hide the bookmarks view
+        /// </summary>
+        public void ShowHideBookmarksView()
+        {
+            if(this._bookmarksView.Visible)
+            {
+                this._bookmarksView.Hide();
+            }
+            else
+            {
+                this._bookmarksView.Show();
+                this._bookmarksView.PrintBookmarks();
+            }
+        }
+
+        /// <summary>
+        /// Get bookmarks from model
+        /// </summary>
+        /// <returns>A list of bookmarks</returns>
+        public List<Bookmark> GetBookmarks()
+        {
+            if(this._bookmarks.BookmarksObjects.Count != 0)
+            {
+                return this._bookmarks.BookmarksObjects;
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Delete the bookmark from file
+        /// </summary>
+        /// <param name="bookmarkName">The bookmark name to delete</param>
+        public void DeleteBookmark(string bookmarkName)
+        {
+            this._bookmarks.RemoveBookmark(bookmarkName);
         }
     }
 }

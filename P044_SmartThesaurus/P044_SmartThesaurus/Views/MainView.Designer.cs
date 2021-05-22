@@ -41,6 +41,7 @@ namespace P044_SmartThesaurus
             this.pathLabel = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.filterHelpPictureBox = new System.Windows.Forms.PictureBox();
             this.cancelButton = new System.Windows.Forms.Button();
             this.nbOfResultsLabel = new System.Windows.Forms.Label();
             this.fichiersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,12 +60,11 @@ namespace P044_SmartThesaurus
             this.outputListBox = new System.Windows.Forms.ListView();
             this.openFolderPictureBox = new System.Windows.Forms.PictureBox();
             this.favoritePictureBox = new System.Windows.Forms.PictureBox();
-            this.filterHelpPictureBox = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.filterHelpPictureBox)).BeginInit();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.openFolderPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.favoritePictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filterHelpPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pathTextBox
@@ -162,6 +162,16 @@ namespace P044_SmartThesaurus
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrer les résultats";
             // 
+            // filterHelpPictureBox
+            // 
+            this.filterHelpPictureBox.Image = global::P044_SmartThesaurus.Properties.Resources.help_icon;
+            this.filterHelpPictureBox.Location = new System.Drawing.Point(254, 15);
+            this.filterHelpPictureBox.Name = "filterHelpPictureBox";
+            this.filterHelpPictureBox.Size = new System.Drawing.Size(26, 24);
+            this.filterHelpPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.filterHelpPictureBox.TabIndex = 28;
+            this.filterHelpPictureBox.TabStop = false;
+            // 
             // cancelButton
             // 
             this.cancelButton.BackColor = System.Drawing.Color.Tomato;
@@ -206,14 +216,14 @@ namespace P044_SmartThesaurus
             this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
             this.exporterToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.exporterToolStripMenuItem.Text = "Exporter";
-            this.exporterToolStripMenuItem.Click += new System.EventHandler(this.ExportDatasToolStripMenuItem_Click);
+            this.exporterToolStripMenuItem.Click += new System.EventHandler(this.ExportDataButtonClick);
             // 
             // quitterLapplicationToolStripMenuItem
             // 
             this.quitterLapplicationToolStripMenuItem.Name = "quitterLapplicationToolStripMenuItem";
             this.quitterLapplicationToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.quitterLapplicationToolStripMenuItem.Text = "Quitter";
-            this.quitterLapplicationToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            this.quitterLapplicationToolStripMenuItem.Click += new System.EventHandler(this.ExitButtonClick);
             // 
             // favorisToolStripMenuItem
             // 
@@ -227,13 +237,14 @@ namespace P044_SmartThesaurus
             // listeFavorisToolStripMenuItem
             // 
             this.listeFavorisToolStripMenuItem.Name = "listeFavorisToolStripMenuItem";
-            this.listeFavorisToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.listeFavorisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listeFavorisToolStripMenuItem.Text = "Liste favoris";
+            this.listeFavorisToolStripMenuItem.Click += new System.EventHandler(this.listeFavorisToolStripMenuItem_Click);
             // 
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             // 
             // aideToolStripMenuItem
@@ -316,16 +327,6 @@ namespace P044_SmartThesaurus
             this.favoritePictureBox.TabIndex = 20;
             this.favoritePictureBox.TabStop = false;
             // 
-            // filterHelpPictureBox
-            // 
-            this.filterHelpPictureBox.Image = global::P044_SmartThesaurus.Properties.Resources.help_icon;
-            this.filterHelpPictureBox.Location = new System.Drawing.Point(254, 15);
-            this.filterHelpPictureBox.Name = "filterHelpPictureBox";
-            this.filterHelpPictureBox.Size = new System.Drawing.Size(26, 24);
-            this.filterHelpPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.filterHelpPictureBox.TabIndex = 28;
-            this.filterHelpPictureBox.TabStop = false;
-            // 
             // MainView
             // 
             this.AcceptButton = this.execButton;
@@ -351,11 +352,11 @@ namespace P044_SmartThesaurus
             this.Text = "Indexator";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.filterHelpPictureBox)).EndInit();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.openFolderPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.favoritePictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filterHelpPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

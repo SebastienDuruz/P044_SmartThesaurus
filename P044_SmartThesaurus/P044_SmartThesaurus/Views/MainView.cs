@@ -4,12 +4,12 @@
 /// Description : The main view of the application
 
 using P044_patcarqueijo_sebduruz.Controllers;
-using P044_SmartThesaurus.AppBusiness;
 using P044_SmartThesaurus.Resources.ObjectsIndex;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace P044_SmartThesaurus
@@ -66,6 +66,9 @@ namespace P044_SmartThesaurus
             {
                 this.PrintResultsContent();
 
+                // Sleep 1sec just to be sure lastIndex text file is not used anymore
+                Thread.Sleep(1000);
+                
                 // Path was valid, set it to lastIndex
                 this.Ctrler.SetLastIndexed(this.pathTextBox.Text);
             }
@@ -142,7 +145,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Exit the application from the context menu
         /// </summary>
-        private void ExitToolStripMenuItem_Click(object sender, System.EventArgs e)
+        private void ExitButtonClick(object sender, System.EventArgs e)
         {
             Application.Exit();
         }
@@ -173,7 +176,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Export the results actually showed to user
         /// </summary>
-        private void ExportDatasToolStripMenuItem_Click(object sender, System.EventArgs e)
+        private void ExportDataButtonClick(object sender, System.EventArgs e)
         {
             //Open SaveFileDialog to user
             SaveFileDialog fileDialog = new SaveFileDialog()
@@ -335,6 +338,11 @@ namespace P044_SmartThesaurus
                 this.webRadio.Checked = true;
                 this.filesRadio.Checked = false;
             }
+        }
+
+        private void listeFavorisToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.Ctrler.ShowHideBookmarksView();
         }
     }
 }
