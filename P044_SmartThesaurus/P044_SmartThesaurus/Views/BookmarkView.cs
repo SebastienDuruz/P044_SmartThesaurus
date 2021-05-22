@@ -80,5 +80,7 @@ namespace P044_SmartThesaurus.Views
                 this.modifyButton.Enabled = false;
             }
         }
+
+        
     }
 }

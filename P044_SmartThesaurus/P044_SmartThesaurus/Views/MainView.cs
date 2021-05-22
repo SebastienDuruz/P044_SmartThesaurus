@@ -340,9 +340,20 @@ namespace P044_SmartThesaurus
             }
         }
 
-        private void listeFavorisToolStripMenuItem_Click(object sender, System.EventArgs e)
+        /// <summary>
+        /// Show bookmarks list when user click show bookmarks
+        /// </summary>
+        private void ShowBookmarksClick(object sender, System.EventArgs e)
         {
             this.Ctrler.ShowHideBookmarksView();
+        }
+
+        /// <summary>
+        /// Show create bookmark when user click add bookmark
+        /// </summary>
+        private void CreateBookmarkClick(object sender, System.EventArgs e)
+        {
+            this.Ctrler.ShowHideCreateBookmarkView(this.pathTextBox.Text);
         }
     }
 }

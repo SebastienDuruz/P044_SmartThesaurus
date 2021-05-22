@@ -239,13 +239,14 @@ namespace P044_SmartThesaurus
             this.listeFavorisToolStripMenuItem.Name = "listeFavorisToolStripMenuItem";
             this.listeFavorisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listeFavorisToolStripMenuItem.Text = "Liste favoris";
-            this.listeFavorisToolStripMenuItem.Click += new System.EventHandler(this.listeFavorisToolStripMenuItem_Click);
+            this.listeFavorisToolStripMenuItem.Click += new System.EventHandler(this.ShowBookmarksClick);
             // 
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
             this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
+            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.CreateBookmarkClick);
             // 
             // aideToolStripMenuItem
             // 

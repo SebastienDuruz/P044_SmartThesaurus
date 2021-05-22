@@ -27,8 +27,10 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         /// </summary>
         private readonly MainView _mainView = new MainView();
         private readonly BookmarkView _bookmarksView = new BookmarkView();
+        private readonly CreateBookmarkView _createBookmarkView = new CreateBookmarkView();
         private readonly LastIndexed _model = new LastIndexed();
         private readonly Bookmarks _bookmarks = new Bookmarks();
+
 
         /// <summary>
         /// Class Properties
@@ -43,6 +45,7 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         {
             this._mainView.Ctrler = this;
             this._bookmarksView.Ctrler = this;
+            this._createBookmarkView.Ctrler = this;
         }
 
         /// <summary>
@@ -180,6 +183,23 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         }
 
         /// <summary>
+        /// Show or hide the bookmarks view, update the path content if needed
+        /// </summary>
+        /// <param name="pathContent"></param>
+        public void ShowHideCreateBookmarkView(string pathContent = "")
+        {
+            if (this._createBookmarkView.Visible)
+            {
+                this._createBookmarkView.Hide();
+            }
+            else
+            {
+                this._createBookmarkView.Show();
+                this._createBookmarkView.UpdatePathContent(pathContent);
+            }
+        }
+
+        /// <summary>
         /// Show or hide the bookmarks view
         /// </summary>
         public void ShowHideBookmarksView()
@@ -215,6 +235,17 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         public void DeleteBookmark(string bookmarkName)
         {
             this._bookmarks.RemoveBookmark(bookmarkName);
+        }
+
+        /// <summary>
+        /// Create bookmark
+        /// </summary>
+        /// <param name="name">The name of the bookmark</param>
+        /// <param name="path">The path or link of the bookmark</param>
+        /// <param name="description">The description of the bookmark</param>
+        public void AddBookmark(string name, string path, string description)
+        {
+            this._bookmarks.AddBookmark(new Bookmark(path, name, description));
         }
     }
 }
