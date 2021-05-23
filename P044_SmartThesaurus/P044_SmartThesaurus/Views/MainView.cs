@@ -210,7 +210,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Open system file explorer, let user select source folder
         /// </summary>
-        private void OpenFolderPictureBox_Click(object sender, System.EventArgs e)
+        private void OpenFolderIconClick(object sender, System.EventArgs e)
         {
             //Open File dialog to user
             OpenFileDialog fileDialog = new OpenFileDialog
@@ -231,7 +231,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Apply filter to results (use of multiples parameters with ;)
         /// </summary>
-        private void SearchButton_Click(object sender, System.EventArgs e)
+        private void SearchButtonClick(object sender, System.EventArgs e)
         {
             //Clear the actual list and add to filtered results if match found
             this.FilteredResults.Clear();
@@ -252,7 +252,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Remove the applied filters
         /// </summary>
-        private void CancelButton_Click(object sender, System.EventArgs e)
+        private void CancelButtonClick(object sender, System.EventArgs e)
         {
             // Clear FiltersResults and print unfiltered results
             this.FilteredResults.Clear();
@@ -265,7 +265,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Switch the ability to access File explorer
         /// </summary>
-        private void FilesRadio_CheckedChanged(object sender, System.EventArgs e)
+        private void FileRadioButtonChecked(object sender, System.EventArgs e)
         {
             //Change icons for better clarity of what user can or can't do
             if (this.filesRadio.Checked)

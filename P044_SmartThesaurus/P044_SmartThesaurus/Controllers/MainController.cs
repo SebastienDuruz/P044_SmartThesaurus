@@ -28,9 +28,9 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         private readonly MainView _mainView = new MainView();
         private readonly BookmarkView _bookmarksView = new BookmarkView();
         private readonly CreateBookmarkView _createBookmarkView = new CreateBookmarkView();
+        private readonly ModifyBookmarkView _modifyBookmarkView = new ModifyBookmarkView();
         private readonly LastIndexed _model = new LastIndexed();
         private readonly Bookmarks _bookmarks = new Bookmarks();
-
 
         /// <summary>
         /// Class Properties
@@ -46,6 +46,7 @@ namespace P044_patcarqueijo_sebduruz.Controllers
             this._mainView.Ctrler = this;
             this._bookmarksView.Ctrler = this;
             this._createBookmarkView.Ctrler = this;
+            this._modifyBookmarkView.Ctrler = this;
         }
 
         /// <summary>
@@ -185,7 +186,7 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         /// <summary>
         /// Show or hide the bookmarks view, update the path content if needed
         /// </summary>
-        /// <param name="pathContent"></param>
+        /// <param name="pathContent">The path content of the bookmark</param>
         public void ShowHideCreateBookmarkView(string pathContent = "")
         {
             if (this._createBookmarkView.Visible)
@@ -196,6 +197,25 @@ namespace P044_patcarqueijo_sebduruz.Controllers
             {
                 this._createBookmarkView.Show();
                 this._createBookmarkView.UpdatePathContent(pathContent);
+            }
+        }
+
+        /// <summary>
+        /// Show or hide the bookmarks view, update the path content if needed
+        /// </summary>
+        /// <param name="name">The name of the selected bookmark</param>
+        /// <param name="path">The path of the selected bookmark</param>
+        /// <param name="description">The description of the selected bookmark</param>
+        public void ShowHideModifyBookmarkView(string name = "", string path = "", string description = "")
+        {
+            if (this._modifyBookmarkView.Visible)
+            {
+                this._modifyBookmarkView.Hide();
+            }
+            else
+            {
+                this._modifyBookmarkView.Show();
+                this._modifyBookmarkView.UpdateContent(name, path, description);
             }
         }
 
@@ -245,7 +265,7 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         /// <param name="description">The description of the bookmark</param>
         public void AddBookmark(string name, string path, string description)
         {
-            // If bookmark alrealy exists print message box with message
+            // If bookmark does not alrealy exists create it and clear form
             if(this._bookmarks.AddBookmark(new Bookmark(path, name, description)))
             {
                 this._mainView.ShowMessageBox("Favoris ajouté avec succès.");
@@ -256,6 +276,35 @@ namespace P044_patcarqueijo_sebduruz.Controllers
             {
                 this._mainView.ShowMessageBox("Un favoris avec le même nom existe déjà. Veuillez changer son nom et réessayer.");
             }
+        }
+
+        /// <summary>
+        /// Create bookmark
+        /// </summary>
+        /// <param name="name">The name of the bookmark</param>
+        /// <param name="path">The path or link of the bookmark</param>
+        /// <param name="description">The description of the bookmark</param>
+        public void ModifyBookmark(string name, string path, string description, string oldName)
+        {
+            // Remove the old bookmark
+            this._bookmarks.RemoveBookmark(oldName);
+
+            // If bookmark does not alrealy exists create it and clear form
+            if (this._bookmarks.AddBookmark(new Bookmark(path, name, description)))
+            {
+                this._mainView.ShowMessageBox("Favoris modifié avec succès.");
+                this.ShowHideModifyBookmarkView();
+                this._bookmarksView.PrintBookmarks();
+            }
+            else
+            {
+                this._mainView.ShowMessageBox("Un favoris avec le même nom existe déjà. Veuillez changer son nom et réessayer.");
+            }
+        }
+
+        public void LoadSelection(string path)
+        {
+            this._mainView.SetContentToPathTextBox(path);
         }
     }
 }

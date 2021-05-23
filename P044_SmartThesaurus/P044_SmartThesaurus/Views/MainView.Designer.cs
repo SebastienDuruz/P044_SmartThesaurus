@@ -75,7 +75,7 @@ namespace P044_SmartThesaurus
             this.searchButton.TabIndex = 17;
             this.searchButton.Text = "Rechercher";
             this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            this.searchButton.Click += new System.EventHandler(this.SearchButtonClick);
             // 
             // filtersTextBox
             // 
@@ -133,7 +133,7 @@ namespace P044_SmartThesaurus
             this.cancelButton.Text = "Annuler";
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Visible = false;
-            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.cancelButton.Click += new System.EventHandler(this.CancelButtonClick);
             // 
             // nbOfResultsLabel
             // 
@@ -301,7 +301,7 @@ namespace P044_SmartThesaurus
             this.openFolderPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.openFolderPictureBox.TabIndex = 24;
             this.openFolderPictureBox.TabStop = false;
-            this.openFolderPictureBox.Click += new System.EventHandler(this.OpenFolderPictureBox_Click);
+            this.openFolderPictureBox.Click += new System.EventHandler(this.OpenFolderIconClick);
             // 
             // filesRadio
             // 
@@ -315,7 +315,7 @@ namespace P044_SmartThesaurus
             this.filesRadio.TabStop = true;
             this.filesRadio.Text = "Fichiers";
             this.filesRadio.UseVisualStyleBackColor = true;
-            this.filesRadio.CheckedChanged += new System.EventHandler(this.FilesRadio_CheckedChanged);
+            this.filesRadio.CheckedChanged += new System.EventHandler(this.FileRadioButtonChecked);
             // 
             // pathTextBox
             // 

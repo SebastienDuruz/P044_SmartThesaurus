@@ -80,5 +80,22 @@ namespace P044_SmartThesaurus.Views
                 this.modifyButton.Enabled = false;
             }
         }
+
+        /// <summary>
+        /// Open modify bookmark view when user select a bookmark
+        /// </summary>
+        private void ModifyButtonClick(object sender, EventArgs e)
+        {
+            this.Ctrler.ShowHideModifyBookmarkView(this.bookmarksListView.SelectedItems[0].SubItems[0].Text, this.bookmarksListView.SelectedItems[0].SubItems[1].Text, this.bookmarksListView.SelectedItems[0].SubItems[2].Text);
+        }
+
+        /// <summary>
+        /// Load the bookmark to main view if user double click selection
+        /// </summary>
+        private void DoubleClickSelectedItem(object sender, EventArgs e)
+        {
+            this.Ctrler.LoadSelection(this.bookmarksListView.SelectedItems[0].SubItems[1].Text);
+            this.Ctrler.ShowHideBookmarksView();
+        }
     }
 }

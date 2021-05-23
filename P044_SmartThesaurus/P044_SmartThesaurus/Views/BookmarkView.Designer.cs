@@ -58,6 +58,7 @@ namespace P044_SmartThesaurus.Views
             this.bookmarksListView.UseCompatibleStateImageBehavior = false;
             this.bookmarksListView.View = System.Windows.Forms.View.Details;
             this.bookmarksListView.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.SelectionChanged);
+            this.bookmarksListView.DoubleClick += new System.EventHandler(this.DoubleClickSelectedItem);
             // 
             // name
             // 
@@ -95,6 +96,7 @@ namespace P044_SmartThesaurus.Views
             this.modifyButton.TabIndex = 3;
             this.modifyButton.Text = "Modifier";
             this.modifyButton.UseVisualStyleBackColor = true;
+            this.modifyButton.Click += new System.EventHandler(this.ModifyButtonClick);
             // 
             // deleteButton
             // 

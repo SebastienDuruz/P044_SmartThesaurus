@@ -16,6 +16,9 @@ using System.Windows.Forms;
 
 namespace P044_SmartThesaurus.Views
 {
+    /// <summary>
+    /// Class CreateBookmarkView
+    /// </summary>
     public partial class CreateBookmarkView : Form
     {
         /// <summary>
