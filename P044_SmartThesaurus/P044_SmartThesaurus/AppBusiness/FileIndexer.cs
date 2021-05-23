@@ -68,11 +68,6 @@ namespace P044_patcarqueijo_sebduruz.AppBusiness
                 // This path is a directory
                 ProcessDirectory(this.SourcePath);
             }
-            else
-            {
-                //TODO : Throw exeption
-                Console.WriteLine("{0} is not a valid file or directory.", this.SourcePath);
-            }
         }
 
         /// <summary>

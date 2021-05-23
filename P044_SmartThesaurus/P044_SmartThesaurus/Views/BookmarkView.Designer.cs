@@ -40,6 +40,9 @@ namespace P044_SmartThesaurus.Views
             // 
             // bookmarksListView
             // 
+            this.bookmarksListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bookmarksListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.name,
             this.path,
@@ -59,19 +62,21 @@ namespace P044_SmartThesaurus.Views
             // name
             // 
             this.name.Text = "Nom";
+            this.name.Width = 100;
             // 
             // path
             // 
             this.path.Text = "Source";
-            this.path.Width = 200;
+            this.path.Width = 250;
             // 
             // description
             // 
             this.description.Text = "Description";
-            this.description.Width = 240;
+            this.description.Width = 300;
             // 
             // closeButton
             // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.closeButton.Location = new System.Drawing.Point(579, 551);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(89, 33);
@@ -82,6 +87,7 @@ namespace P044_SmartThesaurus.Views
             // 
             // modifyButton
             // 
+            this.modifyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.modifyButton.Enabled = false;
             this.modifyButton.Location = new System.Drawing.Point(12, 551);
             this.modifyButton.Name = "modifyButton";
@@ -92,6 +98,7 @@ namespace P044_SmartThesaurus.Views
             // 
             // deleteButton
             // 
+            this.deleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.deleteButton.Enabled = false;
             this.deleteButton.Location = new System.Drawing.Point(107, 551);
             this.deleteButton.Name = "deleteButton";
@@ -111,6 +118,7 @@ namespace P044_SmartThesaurus.Views
             this.Controls.Add(this.modifyButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.bookmarksListView);
+            this.MinimumSize = new System.Drawing.Size(500, 500);
             this.Name = "BookmarkView";
             this.Text = "Mes favoris";
             this.ResumeLayout(false);

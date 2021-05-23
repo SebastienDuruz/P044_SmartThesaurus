@@ -47,5 +47,25 @@ namespace P044_SmartThesaurus.Views
         {
             this.sourceTextBox.Text = path;
         }
+
+        /// <summary>
+        /// Add the bookmark created by user
+        /// </summary>
+        private void ValidateButton(object sender, EventArgs e)
+        {
+            if(this.nameTextBox.Text.Trim(' ') != "")
+            {
+                this.Ctrler.AddBookmark(this.nameTextBox.Text, this.sourceTextBox.Text, this.descriptionTextBox.Text);
+            }
+        }
+
+        /// <summary>
+        /// Clear the text box
+        /// </summary>
+        public void ClearCreationForm()
+        {
+            this.nameTextBox.Text = "";
+            this.descriptionTextBox.Text = "";
+        }
     }
 }

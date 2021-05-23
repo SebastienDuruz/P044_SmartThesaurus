@@ -51,7 +51,7 @@ namespace P044_SmartThesaurus.Views
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 34);
+            this.label1.Location = new System.Drawing.Point(56, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(323, 39);
             this.label1.TabIndex = 1;
@@ -108,6 +108,7 @@ namespace P044_SmartThesaurus.Views
             this.acceptButton.TabIndex = 7;
             this.acceptButton.Text = "Valider";
             this.acceptButton.UseVisualStyleBackColor = true;
+            this.acceptButton.Click += new System.EventHandler(this.ValidateButton);
             // 
             // cancelButton
             // 

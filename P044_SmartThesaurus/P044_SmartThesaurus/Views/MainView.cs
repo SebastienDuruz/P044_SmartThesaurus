@@ -43,7 +43,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Execute the indexation when exec button clicked
         /// </summary>
-        private void ExecButton(object sender, System.EventArgs e)
+        private void ExecuteButtonClick(object sender, System.EventArgs e)
         {
             //Before all search set clear the necessary datas
             this.Results.Clear();
@@ -68,7 +68,7 @@ namespace P044_SmartThesaurus
 
                 // Sleep 1sec just to be sure lastIndex text file is not used anymore
                 Thread.Sleep(1000);
-                
+
                 // Path was valid, set it to lastIndex
                 this.Ctrler.SetLastIndexed(this.pathTextBox.Text);
             }
@@ -321,7 +321,7 @@ namespace P044_SmartThesaurus
         /// </summary>
         private void FilterBoxLeaveFocus(object sender, System.EventArgs e)
         {
-            this.AcceptButton = this.execButton;
+            this.AcceptButton = this.executeButton;
         }
 
         /// <summary>
@@ -355,5 +355,7 @@ namespace P044_SmartThesaurus
         {
             this.Ctrler.ShowHideCreateBookmarkView(this.pathTextBox.Text);
         }
+
+        
     }
 }

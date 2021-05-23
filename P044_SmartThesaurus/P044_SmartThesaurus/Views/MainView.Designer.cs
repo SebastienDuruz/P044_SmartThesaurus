@@ -31,14 +31,9 @@ namespace P044_SmartThesaurus
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pathTextBox = new System.Windows.Forms.TextBox();
-            this.filesRadio = new System.Windows.Forms.RadioButton();
-            this.webRadio = new System.Windows.Forms.RadioButton();
-            this.execButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
             this.filtersTextBox = new System.Windows.Forms.TextBox();
             this.addFavLbl = new System.Windows.Forms.Label();
-            this.pathLabel = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.filterHelpPictureBox = new System.Windows.Forms.PictureBox();
@@ -58,57 +53,19 @@ namespace P044_SmartThesaurus
             this.resultName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.resultPath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.outputListBox = new System.Windows.Forms.ListView();
-            this.openFolderPictureBox = new System.Windows.Forms.PictureBox();
             this.favoritePictureBox = new System.Windows.Forms.PictureBox();
+            this.pathLabel = new System.Windows.Forms.Label();
+            this.webRadio = new System.Windows.Forms.RadioButton();
+            this.openFolderPictureBox = new System.Windows.Forms.PictureBox();
+            this.filesRadio = new System.Windows.Forms.RadioButton();
+            this.pathTextBox = new System.Windows.Forms.TextBox();
+            this.executeButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.filterHelpPictureBox)).BeginInit();
             this.menuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.openFolderPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.favoritePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.openFolderPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pathTextBox
-            // 
-            this.pathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pathTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.pathTextBox.Location = new System.Drawing.Point(53, 55);
-            this.pathTextBox.Multiline = true;
-            this.pathTextBox.Name = "pathTextBox";
-            this.pathTextBox.Size = new System.Drawing.Size(637, 30);
-            this.pathTextBox.TabIndex = 4;
-            // 
-            // filesRadio
-            // 
-            this.filesRadio.AutoSize = true;
-            this.filesRadio.Checked = true;
-            this.filesRadio.Location = new System.Drawing.Point(727, 56);
-            this.filesRadio.Name = "filesRadio";
-            this.filesRadio.Size = new System.Drawing.Size(61, 17);
-            this.filesRadio.TabIndex = 12;
-            this.filesRadio.TabStop = true;
-            this.filesRadio.Text = "Fichiers";
-            this.filesRadio.UseVisualStyleBackColor = true;
-            this.filesRadio.CheckedChanged += new System.EventHandler(this.FilesRadio_CheckedChanged);
-            // 
-            // webRadio
-            // 
-            this.webRadio.AutoSize = true;
-            this.webRadio.Location = new System.Drawing.Point(794, 56);
-            this.webRadio.Name = "webRadio";
-            this.webRadio.Size = new System.Drawing.Size(76, 17);
-            this.webRadio.TabIndex = 13;
-            this.webRadio.Text = "Page Web";
-            this.webRadio.UseVisualStyleBackColor = true;
-            // 
-            // execButton
-            // 
-            this.execButton.Location = new System.Drawing.Point(892, 41);
-            this.execButton.Name = "execButton";
-            this.execButton.Size = new System.Drawing.Size(150, 47);
-            this.execButton.TabIndex = 14;
-            this.execButton.Text = "Executer";
-            this.execButton.UseVisualStyleBackColor = true;
-            this.execButton.Click += new System.EventHandler(this.ExecButton);
             // 
             // searchButton
             // 
@@ -133,6 +90,7 @@ namespace P044_SmartThesaurus
             // 
             // addFavLbl
             // 
+            this.addFavLbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.addFavLbl.AutoSize = true;
             this.addFavLbl.Location = new System.Drawing.Point(889, 502);
             this.addFavLbl.Name = "addFavLbl";
@@ -140,17 +98,9 @@ namespace P044_SmartThesaurus
             this.addFavLbl.TabIndex = 21;
             this.addFavLbl.Text = "Ajouter aux favoris";
             // 
-            // pathLabel
-            // 
-            this.pathLabel.AutoSize = true;
-            this.pathLabel.Location = new System.Drawing.Point(14, 39);
-            this.pathLabel.Name = "pathLabel";
-            this.pathLabel.Size = new System.Drawing.Size(167, 13);
-            this.pathLabel.TabIndex = 22;
-            this.pathLabel.Text = "Dossier source \\ Page web (URL)";
-            // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox1.Controls.Add(this.filterHelpPictureBox);
             this.groupBox1.Controls.Add(this.cancelButton);
             this.groupBox1.Controls.Add(this.filtersTextBox);
@@ -187,6 +137,7 @@ namespace P044_SmartThesaurus
             // 
             // nbOfResultsLabel
             // 
+            this.nbOfResultsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.nbOfResultsLabel.AutoSize = true;
             this.nbOfResultsLabel.Location = new System.Drawing.Point(17, 608);
             this.nbOfResultsLabel.Name = "nbOfResultsLabel";
@@ -237,14 +188,14 @@ namespace P044_SmartThesaurus
             // listeFavorisToolStripMenuItem
             // 
             this.listeFavorisToolStripMenuItem.Name = "listeFavorisToolStripMenuItem";
-            this.listeFavorisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listeFavorisToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.listeFavorisToolStripMenuItem.Text = "Liste favoris";
             this.listeFavorisToolStripMenuItem.Click += new System.EventHandler(this.ShowBookmarksClick);
             // 
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.CreateBookmarkClick);
             // 
@@ -292,6 +243,9 @@ namespace P044_SmartThesaurus
             // outputListBox
             // 
             this.outputListBox.AllowColumnReorder = true;
+            this.outputListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.outputListBox.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.resultType,
             this.resultName,
@@ -306,20 +260,9 @@ namespace P044_SmartThesaurus
             this.outputListBox.View = System.Windows.Forms.View.Details;
             this.outputListBox.DoubleClick += new System.EventHandler(this.OpenWithExplorer);
             // 
-            // openFolderPictureBox
-            // 
-            this.openFolderPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.openFolderPictureBox.Image = global::P044_SmartThesaurus.Properties.Resources.folder_blue;
-            this.openFolderPictureBox.Location = new System.Drawing.Point(14, 55);
-            this.openFolderPictureBox.Name = "openFolderPictureBox";
-            this.openFolderPictureBox.Size = new System.Drawing.Size(33, 29);
-            this.openFolderPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.openFolderPictureBox.TabIndex = 24;
-            this.openFolderPictureBox.TabStop = false;
-            this.openFolderPictureBox.Click += new System.EventHandler(this.OpenFolderPictureBox_Click);
-            // 
             // favoritePictureBox
             // 
+            this.favoritePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.favoritePictureBox.Image = global::P044_SmartThesaurus.Properties.Resources.filledStar;
             this.favoritePictureBox.Location = new System.Drawing.Point(812, 487);
             this.favoritePictureBox.Name = "favoritePictureBox";
@@ -328,12 +271,81 @@ namespace P044_SmartThesaurus
             this.favoritePictureBox.TabIndex = 20;
             this.favoritePictureBox.TabStop = false;
             // 
+            // pathLabel
+            // 
+            this.pathLabel.AutoSize = true;
+            this.pathLabel.Location = new System.Drawing.Point(15, 31);
+            this.pathLabel.Name = "pathLabel";
+            this.pathLabel.Size = new System.Drawing.Size(167, 13);
+            this.pathLabel.TabIndex = 22;
+            this.pathLabel.Text = "Dossier source \\ Page web (URL)";
+            // 
+            // webRadio
+            // 
+            this.webRadio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.webRadio.AutoSize = true;
+            this.webRadio.Location = new System.Drawing.Point(794, 56);
+            this.webRadio.Name = "webRadio";
+            this.webRadio.Size = new System.Drawing.Size(76, 17);
+            this.webRadio.TabIndex = 13;
+            this.webRadio.Text = "Page Web";
+            this.webRadio.UseVisualStyleBackColor = true;
+            // 
+            // openFolderPictureBox
+            // 
+            this.openFolderPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.openFolderPictureBox.Image = global::P044_SmartThesaurus.Properties.Resources.folder_blue;
+            this.openFolderPictureBox.Location = new System.Drawing.Point(15, 47);
+            this.openFolderPictureBox.Name = "openFolderPictureBox";
+            this.openFolderPictureBox.Size = new System.Drawing.Size(33, 29);
+            this.openFolderPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.openFolderPictureBox.TabIndex = 24;
+            this.openFolderPictureBox.TabStop = false;
+            this.openFolderPictureBox.Click += new System.EventHandler(this.OpenFolderPictureBox_Click);
+            // 
+            // filesRadio
+            // 
+            this.filesRadio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.filesRadio.AutoSize = true;
+            this.filesRadio.Checked = true;
+            this.filesRadio.Location = new System.Drawing.Point(727, 56);
+            this.filesRadio.Name = "filesRadio";
+            this.filesRadio.Size = new System.Drawing.Size(61, 17);
+            this.filesRadio.TabIndex = 12;
+            this.filesRadio.TabStop = true;
+            this.filesRadio.Text = "Fichiers";
+            this.filesRadio.UseVisualStyleBackColor = true;
+            this.filesRadio.CheckedChanged += new System.EventHandler(this.FilesRadio_CheckedChanged);
+            // 
+            // pathTextBox
+            // 
+            this.pathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pathTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.pathTextBox.Location = new System.Drawing.Point(54, 47);
+            this.pathTextBox.Multiline = true;
+            this.pathTextBox.Name = "pathTextBox";
+            this.pathTextBox.Size = new System.Drawing.Size(637, 30);
+            this.pathTextBox.TabIndex = 4;
+            // 
+            // executeButton
+            // 
+            this.executeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.executeButton.Location = new System.Drawing.Point(889, 43);
+            this.executeButton.Name = "executeButton";
+            this.executeButton.Size = new System.Drawing.Size(118, 42);
+            this.executeButton.TabIndex = 28;
+            this.executeButton.Text = "Exectuer";
+            this.executeButton.UseVisualStyleBackColor = true;
+            this.executeButton.Click += new System.EventHandler(this.ExecuteButtonClick);
+            // 
             // MainView
             // 
-            this.AcceptButton = this.execButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 631);
+            this.Controls.Add(this.executeButton);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.outputListBox);
             this.Controls.Add(this.nbOfResultsLabel);
@@ -341,13 +353,11 @@ namespace P044_SmartThesaurus
             this.Controls.Add(this.pathLabel);
             this.Controls.Add(this.addFavLbl);
             this.Controls.Add(this.favoritePictureBox);
-            this.Controls.Add(this.execButton);
             this.Controls.Add(this.webRadio);
             this.Controls.Add(this.filesRadio);
             this.Controls.Add(this.pathTextBox);
             this.Controls.Add(this.groupBox1);
             this.MainMenuStrip = this.menuStrip;
-            this.MaximumSize = new System.Drawing.Size(1072, 670);
             this.MinimumSize = new System.Drawing.Size(1072, 670);
             this.Name = "MainView";
             this.Text = "Indexator";
@@ -356,8 +366,8 @@ namespace P044_SmartThesaurus
             ((System.ComponentModel.ISupportInitialize)(this.filterHelpPictureBox)).EndInit();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.openFolderPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.favoritePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.openFolderPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,17 +376,11 @@ namespace P044_SmartThesaurus
 
 
         #endregion
-        private System.Windows.Forms.TextBox pathTextBox;
-        private System.Windows.Forms.RadioButton filesRadio;
-        private System.Windows.Forms.RadioButton webRadio;
-        private System.Windows.Forms.Button execButton;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.TextBox filtersTextBox;
         private System.Windows.Forms.PictureBox favoritePictureBox;
         private System.Windows.Forms.Label addFavLbl;
-        private System.Windows.Forms.Label pathLabel;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.PictureBox openFolderPictureBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.PictureBox filterHelpPictureBox;
@@ -395,6 +399,12 @@ namespace P044_SmartThesaurus
         private System.Windows.Forms.ColumnHeader resultName;
         private System.Windows.Forms.ColumnHeader resultPath;
         private System.Windows.Forms.ListView outputListBox;
+        private System.Windows.Forms.Label pathLabel;
+        private System.Windows.Forms.RadioButton webRadio;
+        private System.Windows.Forms.PictureBox openFolderPictureBox;
+        private System.Windows.Forms.RadioButton filesRadio;
+        private System.Windows.Forms.TextBox pathTextBox;
+        private System.Windows.Forms.Button executeButton;
     }
 }
 

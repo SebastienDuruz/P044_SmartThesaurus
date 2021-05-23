@@ -33,10 +33,8 @@ namespace P044_SmartThesaurus.AppBusiness
             // Create the bookmarks file if not exists
             this.CreateBookmarksFile();
 
+            // Read content of the JSON file
             this.ReadFromFile();
-
-            // TODO : Remove this bookmark add
-            this.AddBookmark(new Bookmark("salut", "bonjour", "asdasd"));
         }
 
         /// <summary>

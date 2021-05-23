@@ -245,7 +245,17 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         /// <param name="description">The description of the bookmark</param>
         public void AddBookmark(string name, string path, string description)
         {
-            this._bookmarks.AddBookmark(new Bookmark(path, name, description));
+            // If bookmark alrealy exists print message box with message
+            if(this._bookmarks.AddBookmark(new Bookmark(path, name, description)))
+            {
+                this._mainView.ShowMessageBox("Favoris ajouté avec succès.");
+                this._createBookmarkView.ClearCreationForm();
+                this.ShowHideCreateBookmarkView();
+            }
+            else
+            {
+                this._mainView.ShowMessageBox("Un favoris avec le même nom existe déjà. Veuillez changer son nom et réessayer.");
+            }
         }
     }
 }
