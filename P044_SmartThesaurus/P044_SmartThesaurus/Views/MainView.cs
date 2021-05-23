@@ -338,6 +338,11 @@ namespace P044_SmartThesaurus
                 this.webRadio.Checked = true;
                 this.filesRadio.Checked = false;
             }
+            else
+            {
+                this.filesRadio.Checked = true;
+                this.webRadio.Checked = false;
+            }
         }
 
         /// <summary>
