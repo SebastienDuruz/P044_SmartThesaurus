@@ -171,7 +171,7 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         /// </summary>
         public void GetLastIndexed()
         {
-            this._mainView.SetContentToPathTextBox(this._model.GetLastIndexed());
+            this._mainView.SetContentToPathTextBox($"{this._model.GetLastIndexed().TrimEnd(' ')}");
         }
 
         /// <summary>

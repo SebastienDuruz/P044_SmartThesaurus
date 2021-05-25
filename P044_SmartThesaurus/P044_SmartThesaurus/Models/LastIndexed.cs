@@ -23,7 +23,7 @@ namespace P044_patcarqueijo_sebduruz.Models
         /// </summary>
         public LastIndexed()
         {
-            this.FilePath = $@"{Environment.CurrentDirectory}/lastIndexed.txt";
+            this.FilePath = $"{Environment.CurrentDirectory}/lastIndexed.txt";
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace P044_patcarqueijo_sebduruz.Models
         {
             if (CheckFile())
             {
-                string test = File.ReadAllText(this.FilePath);
+                string test = File.ReadAllText(this.FilePath).Trim('\n', '\r');
                 return test;
             }
             else
