@@ -56,7 +56,7 @@
     <Compile Include="AppBusiness\WebScraper.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Models\LastIndexed.cs" />
-    <Compile Include="Resources\Icons1.Designer.cs">
+    <Compile Include="Resources\Icons.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Icons.resx</DependentUpon>
@@ -99,7 +99,7 @@
     </Compile>
     <EmbeddedResource Include="Resources\Icons.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Icons1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Icons.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CreateBookmarkView.resx">
       <DependentUpon>CreateBookmarkView.cs</DependentUpon>
@@ -131,11 +131,15 @@
   <ItemGroup>
     <Content Include="Resources\document-open.png" />
     <Content Include="Resources\emblem-symbolic-link.png" />
+    <None Include="Resources\fileIcon.png" />
     <Content Include="Resources\filledStar.png" />
+    <None Include="Resources\filledYellowStar.png" />
     <Content Include="Resources\folder-blue.png" />
     <Content Include="Resources\folder-gray.png" />
     <Content Include="Resources\help_icon.jpg" />
-    <Content Include="Resources\picture_black.png" />
+    <None Include="Resources\system-file-manager.png" />
+    <None Include="Resources\picture.png" />
+    <None Include="Resources\pictureImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

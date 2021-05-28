@@ -303,9 +303,9 @@ namespace P044_SmartThesaurus
             this.IconsList = new ImageList();
             this.IconsList.ImageSize = new Size(25, 25);
             this.IconsList.Images.Add((Image)Resources.Icons.folder_gray);
-            this.IconsList.Images.Add((Image)Resources.Icons.document_open);
+            this.IconsList.Images.Add((Image)Resources.Icons.fileIcon);
             this.IconsList.Images.Add((Image)Resources.Icons.emblem_symbolic_link);
-            this.IconsList.Images.Add((Image)Resources.Icons.picture_black);
+            this.IconsList.Images.Add((Image)Resources.Icons.pictureImage);
         }
 
         /// <summary>

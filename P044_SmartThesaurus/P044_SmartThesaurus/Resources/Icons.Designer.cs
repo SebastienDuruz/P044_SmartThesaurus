@@ -63,16 +63,6 @@ namespace P044_SmartThesaurus.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap document_open {
-            get {
-                object obj = ResourceManager.GetObject("document_open", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap emblem_symbolic_link {
             get {
                 object obj = ResourceManager.GetObject("emblem_symbolic_link", resourceCulture);
@@ -83,9 +73,29 @@ namespace P044_SmartThesaurus.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fileIcon {
+            get {
+                object obj = ResourceManager.GetObject("fileIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap filledStar {
             get {
                 object obj = ResourceManager.GetObject("filledStar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap filledYellowStar {
+            get {
+                object obj = ResourceManager.GetObject("filledYellowStar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +133,9 @@ namespace P044_SmartThesaurus.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap picture_black {
+        internal static System.Drawing.Bitmap pictureImage {
             get {
-                object obj = ResourceManager.GetObject("picture_black", resourceCulture);
+                object obj = ResourceManager.GetObject("pictureImage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
