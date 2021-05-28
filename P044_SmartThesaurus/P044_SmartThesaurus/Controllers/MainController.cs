@@ -29,7 +29,7 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         private readonly BookmarkView _bookmarksView = new BookmarkView();
         private readonly CreateBookmarkView _createBookmarkView = new CreateBookmarkView();
         private readonly ModifyBookmarkView _modifyBookmarkView = new ModifyBookmarkView();
-        private readonly LastIndexed _model = new LastIndexed();
+        private readonly LastIndexed _lastIndexed = new LastIndexed();
         private readonly Bookmarks _bookmarks = new Bookmarks();
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         /// </summary>
         public void GetLastIndexed()
         {
-            this._mainView.SetContentToPathTextBox($"{this._model.GetLastIndexed().TrimEnd(' ')}");
+            this._mainView.SetContentToPathTextBox($"{this._lastIndexed.GetLastIndexed().TrimEnd(' ')}");
         }
 
         /// <summary>
@@ -180,7 +180,7 @@ namespace P044_patcarqueijo_sebduruz.Controllers
         /// <param name="lastIndex"></param>
         public void SetLastIndexed(string lastIndex)
         {
-            this._model.SetLastindexed(lastIndex);
+            this._lastIndexed.SetLastindexed(lastIndex);
         }
 
         /// <summary>
