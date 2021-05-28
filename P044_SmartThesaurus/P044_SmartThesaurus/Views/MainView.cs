@@ -5,6 +5,7 @@
 
 using P044_patcarqueijo_sebduruz.Controllers;
 using P044_SmartThesaurus.Resources.ObjectsIndex;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
@@ -43,7 +44,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Execute the indexation when exec button clicked
         /// </summary>
-        private void ExecuteButtonClick(object sender, System.EventArgs e)
+        private void ExecuteButtonClick(object sender, EventArgs e)
         {
             //Before all search set clear the necessary datas
             this.Results.Clear();
@@ -145,7 +146,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Exit the application from the context menu
         /// </summary>
-        private void ExitButtonClick(object sender, System.EventArgs e)
+        private void ExitButtonClick(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -153,7 +154,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Open the path
         /// </summary>
-        private void OpenWithExplorer(object sender, System.EventArgs e)
+        private void OpenWithExplorer(object sender, EventArgs e)
         {
             if (this.outputListBox.SelectedItems.Count > 0)
             {
@@ -176,7 +177,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Export the results actually showed to user
         /// </summary>
-        private void ExportDataButtonClick(object sender, System.EventArgs e)
+        private void ExportDataButtonClick(object sender, EventArgs e)
         {
             //Open SaveFileDialog to user
             SaveFileDialog fileDialog = new SaveFileDialog()
@@ -210,7 +211,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Open system file explorer, let user select source folder
         /// </summary>
-        private void OpenFolderIconClick(object sender, System.EventArgs e)
+        private void OpenFolderIconClick(object sender,  EventArgs e)
         {
             //Open File dialog to user
             OpenFileDialog fileDialog = new OpenFileDialog
@@ -231,7 +232,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Apply filter to results (use of multiples parameters with ;)
         /// </summary>
-        private void SearchButtonClick(object sender, System.EventArgs e)
+        private void SearchButtonClick(object sender, EventArgs e)
         {
             //Clear the actual list and add to filtered results if match found
             this.FilteredResults.Clear();
@@ -252,7 +253,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Remove the applied filters
         /// </summary>
-        private void CancelButtonClick(object sender, System.EventArgs e)
+        private void CancelButtonClick(object sender, EventArgs e)
         {
             // Clear FiltersResults and print unfiltered results
             this.FilteredResults.Clear();
@@ -311,7 +312,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// When user focus enter to filterbox, change enter key validation button
         /// </summary>
-        private void FilterBoxTakeFocus(object sender, System.EventArgs e)
+        private void FilterBoxTakeFocus(object sender, EventArgs e)
         {
             this.AcceptButton = this.searchButton;
         }
@@ -319,7 +320,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// When user LEAVE the filterbox change enter key validation button
         /// </summary>
-        private void FilterBoxLeaveFocus(object sender, System.EventArgs e)
+        private void FilterBoxLeaveFocus(object sender, EventArgs e)
         {
             this.AcceptButton = this.executeButton;
         }
@@ -348,7 +349,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Show bookmarks list when user click show bookmarks
         /// </summary>
-        private void ShowBookmarksClick(object sender, System.EventArgs e)
+        private void ShowBookmarksClick(object sender, EventArgs e)
         {
             this.Ctrler.ShowHideBookmarksView();
         }
@@ -356,7 +357,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Show create bookmark when user click add bookmark
         /// </summary>
-        private void CreateBookmarkClick(object sender, System.EventArgs e)
+        private void CreateBookmarkClick(object sender, EventArgs e)
         {
             this.Ctrler.ShowHideCreateBookmarkView(this.pathTextBox.Text);
         }
