@@ -6,7 +6,6 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.IO;
 
 namespace P044_SmartThesaurus.AppBusiness

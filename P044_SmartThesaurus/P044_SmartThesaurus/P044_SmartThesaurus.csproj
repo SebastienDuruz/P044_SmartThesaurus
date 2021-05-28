@@ -129,7 +129,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Resources\document-open.png" />
     <Content Include="Resources\emblem-symbolic-link.png" />
     <None Include="Resources\fileIcon.png" />
     <Content Include="Resources\filledStar.png" />
@@ -137,8 +136,6 @@
     <Content Include="Resources\folder-blue.png" />
     <Content Include="Resources\folder-gray.png" />
     <Content Include="Resources\help_icon.jpg" />
-    <None Include="Resources\system-file-manager.png" />
-    <None Include="Resources\picture.png" />
     <None Include="Resources\pictureImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
