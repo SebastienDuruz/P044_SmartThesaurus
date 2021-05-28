@@ -60,8 +60,15 @@ namespace P044_SmartThesaurus.Views
         /// </summary>
         private void DeleteButtonClick(object sender, EventArgs e)
         {
-            this.Ctrler.DeleteBookmark(this.bookmarksListView.SelectedItems[0].SubItems[0].Text);
-            this.bookmarksListView.Items.Remove(this.bookmarksListView.SelectedItems[0]);
+            // Ask user for confirmation of the delete action
+            DialogResult confirmResult = MessageBox.Show($"Etes vous sur de vouloir supprimer le favoris \"{this.bookmarksListView.SelectedItems[0].SubItems[0].Text}\" ?", "Valider la suppression", MessageBoxButtons.YesNo);
+
+            // User confirms the delete action, remove the bookmark
+            if (confirmResult == DialogResult.Yes)
+            {
+                this.Ctrler.DeleteBookmark(this.bookmarksListView.SelectedItems[0].SubItems[0].Text);
+                this.bookmarksListView.Items.Remove(this.bookmarksListView.SelectedItems[0]);
+            }
         }
 
         /// <summary>
