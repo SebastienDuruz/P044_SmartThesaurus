@@ -3,7 +3,7 @@
 /// Date : 08.05.2021
 /// Description : An object resulted from the indexation.
 
-namespace P044_SmartThesaurus.Resources.ObjectsIndex
+namespace P044_SmartThesaurus.AppBusiness
 {
     /// <summary>
     /// Class IndexedObject

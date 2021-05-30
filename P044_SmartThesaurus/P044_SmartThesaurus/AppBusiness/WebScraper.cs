@@ -4,12 +4,11 @@
 /// Description : A basic project to test Web scraping.
 ///               Inspired by https://www.dotnetperls.com/scraping-html for the creation of WebsiteIndexer Class.
 
-using P044_SmartThesaurus.Resources.ObjectsIndex;
 using System.Collections.Generic;
 using System.Net;
 using System.Text.RegularExpressions;
 
-namespace P044_patcarqueijo_sebduruz.AppBusiness
+namespace P044_SmartThesaurus.AppBusiness
 {
     /// <summary>
     /// Class WebScraper

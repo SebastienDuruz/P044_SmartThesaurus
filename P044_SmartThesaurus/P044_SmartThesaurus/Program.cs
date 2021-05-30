@@ -1,8 +1,5 @@
-﻿using P044_patcarqueijo_sebduruz.Controllers;
+﻿using P044_SmartThesaurus.Controllers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace P044_SmartThesaurus

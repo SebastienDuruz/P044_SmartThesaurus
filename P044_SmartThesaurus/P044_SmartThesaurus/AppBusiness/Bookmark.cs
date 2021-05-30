@@ -3,12 +3,6 @@
 /// Date : 22.05.2021
 /// Description : A class representing Bookmark objects that will be converted to JSON
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace P044_SmartThesaurus.AppBusiness
 {
     /// <summary>

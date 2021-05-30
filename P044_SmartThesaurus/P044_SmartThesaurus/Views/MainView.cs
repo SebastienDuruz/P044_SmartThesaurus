@@ -3,8 +3,8 @@
 /// Date : 08.05.2021
 /// Description : The main view of the application
 
-using P044_patcarqueijo_sebduruz.Controllers;
-using P044_SmartThesaurus.Resources.ObjectsIndex;
+using P044_SmartThesaurus.AppBusiness;
+using P044_SmartThesaurus.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

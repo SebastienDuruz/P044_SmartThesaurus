@@ -6,7 +6,7 @@
 using System;
 using System.IO;
 
-namespace P044_patcarqueijo_sebduruz.Models
+namespace P044_SmartThesaurus.Models
 {
     /// <summary>
     /// Class Model

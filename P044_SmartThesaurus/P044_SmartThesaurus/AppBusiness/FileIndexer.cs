@@ -3,13 +3,11 @@
 /// Date : 02.05.2021
 /// Description : Manipulation of indexation from Microsoft libraries. Use of Singleton principle
 
-using P044_SmartThesaurus.Resources.ObjectsIndex;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace P044_patcarqueijo_sebduruz.AppBusiness
+namespace P044_SmartThesaurus.AppBusiness
 {
     /// <summary>
     /// Class FileIndexer

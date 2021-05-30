@@ -3,15 +3,8 @@
 /// Date : 22.05.2020
 /// Description : This view let user Create a new bookmark
 
-using P044_patcarqueijo_sebduruz.Controllers;
+using P044_SmartThesaurus.Controllers;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace P044_SmartThesaurus.Views

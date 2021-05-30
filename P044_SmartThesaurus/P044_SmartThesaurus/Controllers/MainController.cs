@@ -3,16 +3,13 @@
 /// Date : 08.05.2021
 /// Description : The main controller of the application
 
-using P044_patcarqueijo_sebduruz.AppBusiness;
-using P044_patcarqueijo_sebduruz.Models;
-using P044_SmartThesaurus;
 using P044_SmartThesaurus.AppBusiness;
-using P044_SmartThesaurus.Resources.ObjectsIndex;
+using P044_SmartThesaurus.Models;
 using P044_SmartThesaurus.Views;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace P044_patcarqueijo_sebduruz.Controllers
+namespace P044_SmartThesaurus.Controllers
 {
     public class MainController
     {
