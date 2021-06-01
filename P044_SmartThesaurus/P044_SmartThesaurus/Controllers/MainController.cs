@@ -308,6 +308,9 @@ namespace P044_SmartThesaurus.Controllers
             this._mainView.SetContentToPathTextBox(path);
         }
 
+        /// <summary>
+        /// Check if bookmark is load into path
+        /// </summary>
         public void CheckBookmark()
         {
             // Get bookmarks

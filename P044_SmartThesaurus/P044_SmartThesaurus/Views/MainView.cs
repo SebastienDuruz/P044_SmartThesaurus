@@ -272,12 +272,12 @@ namespace P044_SmartThesaurus
             if (this.filesRadio.Checked)
             {
                 this.openFolderPictureBox.Enabled = true;
-                this.openFolderPictureBox.Image = Resources.Icons.folder_blue;
+                this.openFolderPictureBox.Image = Resources.iconsRes.folder_blue;
             }
             else
             {
                 this.openFolderPictureBox.Enabled = false;
-                this.openFolderPictureBox.Image = Resources.Icons.folder_gray;
+                this.openFolderPictureBox.Image = Resources.iconsRes.folder_gray;
             }
         }
 
@@ -303,10 +303,10 @@ namespace P044_SmartThesaurus
         {
             this.IconsList = new ImageList();
             this.IconsList.ImageSize = new Size(25, 25);
-            this.IconsList.Images.Add((Image)Resources.Icons.folder_gray);
-            this.IconsList.Images.Add((Image)Resources.Icons.fileIcon);
-            this.IconsList.Images.Add((Image)Resources.Icons.emblem_symbolic_link);
-            this.IconsList.Images.Add((Image)Resources.Icons.pictureImage);
+            this.IconsList.Images.Add((Image)Resources.iconsRes.folder_gray);
+            this.IconsList.Images.Add((Image)Resources.iconsRes.fileIcon);
+            this.IconsList.Images.Add((Image)Resources.iconsRes.emblem_symbolic_link);
+            this.IconsList.Images.Add((Image)Resources.iconsRes.pictureImage);
         }
 
         /// <summary>
@@ -379,12 +379,12 @@ namespace P044_SmartThesaurus
         {
             if(exists)
             {
-                this.favoritePictureBox.Image = Resources.Icons.filledYellowStar;
+                this.favoritePictureBox.Image = Resources.iconsRes.filledYellowStar;
                 this.addFavLbl.Text = "Cette source est présente\ndans la liste des favoris.";
             }
             else
             {
-                this.favoritePictureBox.Image = Resources.Icons.filledStar;
+                this.favoritePictureBox.Image = Resources.iconsRes.filledStarGray;
                 this.addFavLbl.Text = "Cette source n'est pas présente\ndans la liste des favoris.";
             }
         }

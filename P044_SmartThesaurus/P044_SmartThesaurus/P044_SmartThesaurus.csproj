@@ -61,6 +61,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Icons.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\iconsRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>iconsRes.resx</DependentUpon>
+    </Compile>
     <Compile Include="Views\CreateBookmarkView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +105,10 @@
     <EmbeddedResource Include="Resources\Icons.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Icons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\iconsRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>iconsRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CreateBookmarkView.resx">
       <DependentUpon>CreateBookmarkView.cs</DependentUpon>
