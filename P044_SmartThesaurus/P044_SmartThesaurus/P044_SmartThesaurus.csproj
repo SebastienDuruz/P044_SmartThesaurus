@@ -133,6 +133,7 @@
     <None Include="Resources\fileIcon.png" />
     <Content Include="Resources\filledStar.png" />
     <None Include="Resources\filledYellowStar.png" />
+    <None Include="Resources\filledStarGray.png" />
     <Content Include="Resources\folder-blue.png" />
     <Content Include="Resources\folder-gray.png" />
     <Content Include="Resources\help_icon.jpg" />

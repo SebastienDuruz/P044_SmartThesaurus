@@ -49,9 +49,11 @@ namespace P044_SmartThesaurus.Views
         /// </summary>
         private void ValidateButton(object sender, EventArgs e)
         {
+            // The name text box can't be empty
             if(this.nameTextBox.Text.Trim(' ') != "")
             {
                 this.Ctrler.AddBookmark(this.nameTextBox.Text, this.sourceTextBox.Text, this.descriptionTextBox.Text);
+                this.Ctrler.CheckBookmark();
             }
         }
 

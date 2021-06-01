@@ -299,9 +299,36 @@ namespace P044_SmartThesaurus.Controllers
             }
         }
 
+        /// <summary>
+        /// Load the selected item with explorer
+        /// </summary>
+        /// <param name="path">The path of the selected item</param>
         public void LoadSelection(string path)
         {
             this._mainView.SetContentToPathTextBox(path);
+        }
+
+        public void CheckBookmark()
+        {
+            // Get bookmarks
+            List<Bookmark> bookmarks = this.GetBookmarks();
+
+            // Get the current path
+            string currentPath = this._mainView.GetCurrentPath();
+            bool exists = false;
+
+            // Check each bookmark for corresponding with currentPath
+            foreach(Bookmark bookmark in bookmarks)
+            {
+                if(bookmark.Path == currentPath)
+                {
+                    exists = true;
+                    break;
+                }
+            }
+
+            // Update the bookmark panel from mainView
+            this._mainView.UpdateBookmarkPanel(exists);
         }
     }
 }

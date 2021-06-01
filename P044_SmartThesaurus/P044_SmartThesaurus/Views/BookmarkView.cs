@@ -68,6 +68,7 @@ namespace P044_SmartThesaurus.Views
             {
                 this.Ctrler.DeleteBookmark(this.bookmarksListView.SelectedItems[0].SubItems[0].Text);
                 this.bookmarksListView.Items.Remove(this.bookmarksListView.SelectedItems[0]);
+                this.Ctrler.CheckBookmark();
             }
         }
 

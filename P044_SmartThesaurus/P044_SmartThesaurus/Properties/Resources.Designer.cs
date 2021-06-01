@@ -73,6 +73,16 @@ namespace P044_SmartThesaurus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap filledStarGray {
+            get {
+                object obj = ResourceManager.GetObject("filledStarGray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap folder_blue {
             get {
                 object obj = ResourceManager.GetObject("folder-blue", resourceCulture);

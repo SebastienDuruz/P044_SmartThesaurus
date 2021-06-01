@@ -362,6 +362,40 @@ namespace P044_SmartThesaurus
             this.Ctrler.ShowHideCreateBookmarkView(this.pathTextBox.Text);
         }
 
-        
+        /// <summary>
+        /// Check if update needed to bookmark panel
+        /// </summary>
+        private void UpdateBookmark(object sender, EventArgs e)
+        {
+            this.Ctrler.CheckBookmark();
+        }
+
+
+        /// <summary>
+        /// Change star color and message when bookmarks changes
+        /// </summary>
+        /// <param name="exists">if bookmark exists equal true, if not false</param>
+        public void UpdateBookmarkPanel(bool exists)
+        {
+            if(exists)
+            {
+                this.favoritePictureBox.Image = Resources.Icons.filledYellowStar;
+                this.addFavLbl.Text = "Cette source est présente\ndans la liste des favoris.";
+            }
+            else
+            {
+                this.favoritePictureBox.Image = Resources.Icons.filledStar;
+                this.addFavLbl.Text = "Cette source n'est pas présente\ndans la liste des favoris.";
+            }
+        }
+
+        /// <summary>
+        /// Return the current path
+        /// </summary>
+        /// <returns>The current path</returns>
+        public string GetCurrentPath()
+        {
+            return this.pathTextBox.Text;
+        }
     }
 }
