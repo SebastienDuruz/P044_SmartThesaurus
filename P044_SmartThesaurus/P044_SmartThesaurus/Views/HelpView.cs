@@ -38,14 +38,6 @@ namespace P044_SmartThesaurus
         }
 
         /// <summary>
-        /// Hide the form if the close button as been pressed
-        /// </summary>
-        private void CloseButtonClick(object sender, EventArgs e)
-        {
-            this.Visible = !this.Visible;
-        }
-
-        /// <summary>
         /// Check if user press a specific key on the keyboard
         /// </summary>
         void UserKeyPressed(object sender, KeyEventArgs e)
@@ -55,6 +47,14 @@ namespace P044_SmartThesaurus
             {
                 this.Ctrler.ShowHideHelpView();
             }
+        }
+
+        /// <summary>
+        /// Hide the form if the close button as been pressed
+        /// </summary>
+        private void CloseButtonClick(object sender, EventArgs e)
+        {
+            this.Visible = !this.Visible;
         }
     }
 }
