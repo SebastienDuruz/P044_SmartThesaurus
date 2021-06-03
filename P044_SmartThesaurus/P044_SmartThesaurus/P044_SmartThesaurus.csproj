@@ -78,11 +78,11 @@
     <Compile Include="Views\BookmarkView.Designer.cs">
       <DependentUpon>BookmarkView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\HeplView.cs">
+    <Compile Include="Views\HelpView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\HeplView.Designer.cs">
-      <DependentUpon>HeplView.cs</DependentUpon>
+    <Compile Include="Views\HelpView.Designer.cs">
+      <DependentUpon>HelpView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\MainView.cs">
       <SubType>Form</SubType>
@@ -121,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\BookmarkView.resx">
       <DependentUpon>BookmarkView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HelpView.resx">
+      <DependentUpon>HelpView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>

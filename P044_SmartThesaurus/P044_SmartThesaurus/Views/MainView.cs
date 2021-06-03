@@ -402,10 +402,9 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// When user click the display help menu run the help view 
         /// </summary>
-        private void afficherLaideToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OpenHelpMenuStrip(object sender, EventArgs e)
         {
-            this.Ctrler.RunHelpView();
-
+            this.Ctrler.ShowHideHelpView();
         }
     }
 }

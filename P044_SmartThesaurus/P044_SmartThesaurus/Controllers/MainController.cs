@@ -26,9 +26,9 @@ namespace P044_SmartThesaurus.Controllers
         private readonly BookmarkView _bookmarksView = new BookmarkView();
         private readonly CreateBookmarkView _createBookmarkView = new CreateBookmarkView();
         private readonly ModifyBookmarkView _modifyBookmarkView = new ModifyBookmarkView();
+        private readonly HelpView _helpView = new HelpView();
         private readonly LastIndexed _lastIndexed = new LastIndexed();
         private readonly Bookmarks _bookmarks = new Bookmarks();
-        private readonly HelpView _helpView = new HelpView();
 
         /// <summary>
         /// Class Properties
@@ -56,6 +56,7 @@ namespace P044_SmartThesaurus.Controllers
             this.GetLastIndexed();
             Application.Run(this._mainView);
         }
+
         /// <summary>
         /// Run the help view
         /// </summary>
@@ -239,6 +240,21 @@ namespace P044_SmartThesaurus.Controllers
             {
                 this._bookmarksView.Show();
                 this._bookmarksView.PrintBookmarks();
+            }
+        }
+
+        /// <summary>
+        /// Show or hide the help view
+        /// </summary>
+        public void ShowHideHelpView()
+        {
+            if(this._helpView.Visible)
+            {
+                this._helpView.Hide();
+            }
+            else
+            {
+                this._helpView.Show();
             }
         }
 

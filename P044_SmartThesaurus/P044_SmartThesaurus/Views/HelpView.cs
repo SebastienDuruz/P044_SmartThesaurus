@@ -1,8 +1,9 @@
-﻿using P044_SmartThesaurus.Controllers;
+﻿// TODO : Add Pat header
+
+using P044_SmartThesaurus.Controllers;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-
 
 namespace P044_SmartThesaurus
 {
@@ -14,12 +15,14 @@ namespace P044_SmartThesaurus
         public MainController Ctrler { get; set; }
         private ImageList IconsList { get; set; }
 
+        /// <summary>
+        /// Default Constuctor
+        /// </summary>
         public HelpView()
         {
             InitializeComponent();
             this.GetImagesFromResource();
         }
-
 
         /// <summary>
         /// Get the images from resource file (used for showing icon)
@@ -30,9 +33,12 @@ namespace P044_SmartThesaurus
             this.IconsList.ImageSize = new Size(30, 30);
         }
 
-        private void button_close_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Hide the form if the close button as been pressed
+        /// </summary>
+        private void CloseButtonClick(object sender, EventArgs e)
         {
-            ActiveForm.Hide();
+            this.Visible = !this.Visible;
         }
     }
 }
