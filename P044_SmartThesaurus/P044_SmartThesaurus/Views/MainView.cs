@@ -38,6 +38,7 @@ namespace P044_SmartThesaurus
             this.FilteredResults = new List<IndexedObject>();
             this.toolTip.SetToolTip(this.pathLabel, @"Veuillez entrer un chemin d'accès ou une page web. (Exemples [C:\Users\USERNAME\Documents] [https://fr.wikipedia.org/])  ");
             this.toolTip.SetToolTip(this.filterHelpPictureBox, "Combiner les filtres avec l'ajout du caractère [:] entre chaque filtre\n Nouveau filtres avec l'ajout du caractère [|]");
+            this.toolTip.SetToolTip(this.bookmarkHelpIcon, "Pour ajouter un favoris cliquer sur l'étoile ou directement depuis le menu favoris-->ajouter.");
             this.GetImagesFromResource();
 
             // Add event to read user keys
@@ -374,7 +375,6 @@ namespace P044_SmartThesaurus
             this.Ctrler.CheckBookmark();
         }
 
-
         /// <summary>
         /// Change star color and message when bookmarks changes
         /// </summary>
@@ -421,6 +421,7 @@ namespace P044_SmartThesaurus
                 this.Ctrler.ShowHideHelpView();
             }
 
+            // User press CTRL-S --> execute the exportation
             if(e.KeyCode == Keys.S && (e.Control))
             {
                 this.ExportDataButtonClick(null, null);
