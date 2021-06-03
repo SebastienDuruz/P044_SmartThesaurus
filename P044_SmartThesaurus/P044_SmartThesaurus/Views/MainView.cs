@@ -426,6 +426,24 @@ namespace P044_SmartThesaurus
             {
                 this.ExportDataButtonClick(null, null);
             }
+
+            // User press A --> open the addBookmark view
+            if(e.KeyCode == Keys.A)
+            {
+                this.CreateBookmarkClick(null, null);
+            }
+
+            // User press E --> close the bookmarklist view
+            if(e.KeyCode == Keys.E)
+            {
+                this.ShowBookmarksClick(null, null);
+            }
+
+            // User press Escape --> close the application
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.ExitButtonClick(null, null);
+            }
         }
     }
 }

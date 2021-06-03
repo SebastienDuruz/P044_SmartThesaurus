@@ -38,8 +38,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -160,20 +158,6 @@
             this.label8.TabIndex = 9;
             this.label8.Text = " - Indexation page web";
             // 
-            // label9
-            // 
-            this.label9.Location = new System.Drawing.Point(0, 171);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 23);
-            this.label9.TabIndex = 17;
-            // 
-            // label10
-            // 
-            this.label10.Location = new System.Drawing.Point(0, 171);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 23);
-            this.label10.TabIndex = 16;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -260,8 +244,6 @@
             this.ClientSize = new System.Drawing.Size(986, 610);
             this.ControlBox = false;
             this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_close);
             this.Controls.Add(this.documentationPanel);
@@ -292,8 +274,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;

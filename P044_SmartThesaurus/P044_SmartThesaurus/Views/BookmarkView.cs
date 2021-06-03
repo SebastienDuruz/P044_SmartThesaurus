@@ -26,6 +26,10 @@ namespace P044_SmartThesaurus.Views
         public BookmarkView()
         {
             InitializeComponent();
+
+            // Add event to read user keys
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(UserKeyPressed);
         }
 
         /// <summary>
@@ -104,6 +108,18 @@ namespace P044_SmartThesaurus.Views
         {
             this.Ctrler.LoadSelection(this.bookmarksListView.SelectedItems[0].SubItems[1].Text);
             this.Ctrler.ShowHideBookmarksView();
+        }
+
+        /// <summary>
+        /// Check if user press a specific key on the keyboard
+        /// </summary>
+        void UserKeyPressed(object sender, KeyEventArgs e)
+        {
+            // User press E --> close the bookmarklist view
+            if (e.KeyCode == Keys.E)
+            {
+                this.Ctrler.ShowHideBookmarksView();
+            }
         }
     }
 }

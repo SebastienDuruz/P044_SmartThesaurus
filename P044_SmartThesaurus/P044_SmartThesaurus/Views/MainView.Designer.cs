@@ -173,15 +173,15 @@ namespace P044_SmartThesaurus
             // exporterToolStripMenuItem
             // 
             this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
-            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.exporterToolStripMenuItem.Text = "CTRL-S - Exporter";
+            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.exporterToolStripMenuItem.Text = "Exporter                        CTRL-S";
             this.exporterToolStripMenuItem.Click += new System.EventHandler(this.ExportDataButtonClick);
             // 
             // quitterLapplicationToolStripMenuItem
             // 
             this.quitterLapplicationToolStripMenuItem.Name = "quitterLapplicationToolStripMenuItem";
-            this.quitterLapplicationToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.quitterLapplicationToolStripMenuItem.Text = "Quitter";
+            this.quitterLapplicationToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.quitterLapplicationToolStripMenuItem.Text = " Quitter                          ESC";
             this.quitterLapplicationToolStripMenuItem.Click += new System.EventHandler(this.ExitButtonClick);
             // 
             // favorisToolStripMenuItem
@@ -196,15 +196,15 @@ namespace P044_SmartThesaurus
             // listeFavorisToolStripMenuItem
             // 
             this.listeFavorisToolStripMenuItem.Name = "listeFavorisToolStripMenuItem";
-            this.listeFavorisToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.listeFavorisToolStripMenuItem.Text = "Liste favoris";
+            this.listeFavorisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listeFavorisToolStripMenuItem.Text = "Liste favoris        E";
             this.listeFavorisToolStripMenuItem.Click += new System.EventHandler(this.ShowBookmarksClick);
             // 
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.ajouterToolStripMenuItem.Text = "Ajouter";
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajouterToolStripMenuItem.Text = "Ajouter                A";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.CreateBookmarkClick);
             // 
             // aideToolStripMenuItem
@@ -218,8 +218,8 @@ namespace P044_SmartThesaurus
             // afficherLaideToolStripMenuItem
             // 
             this.afficherLaideToolStripMenuItem.Name = "afficherLaideToolStripMenuItem";
-            this.afficherLaideToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.afficherLaideToolStripMenuItem.Text = "F1 - Afficher l\'aide";
+            this.afficherLaideToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.afficherLaideToolStripMenuItem.Text = "Afficher l\'aide           F1";
             this.afficherLaideToolStripMenuItem.Click += new System.EventHandler(this.OpenHelpMenuStrip);
             // 
             // menuStrip
