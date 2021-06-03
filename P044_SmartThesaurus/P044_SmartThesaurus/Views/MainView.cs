@@ -39,6 +39,10 @@ namespace P044_SmartThesaurus
             this.toolTip.SetToolTip(this.pathLabel, @"Veuillez entrer un chemin d'accès ou une page web. (Exemples [C:\Users\USERNAME\Documents] [https://fr.wikipedia.org/])  ");
             this.toolTip.SetToolTip(this.filterHelpPictureBox, "Combiner les filtres avec l'ajout du caractère [:] entre chaque filtre\n Nouveau filtres avec l'ajout du caractère [|]");
             this.GetImagesFromResource();
+
+            // Add event to read user keys
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(UserKeyPressed);
         }
 
         /// <summary>
@@ -397,7 +401,6 @@ namespace P044_SmartThesaurus
         {
             return this.pathTextBox.Text;
         }
-
        
         /// <summary>
         /// When user click the display help menu run the help view 
@@ -405,6 +408,23 @@ namespace P044_SmartThesaurus
         private void OpenHelpMenuStrip(object sender, EventArgs e)
         {
             this.Ctrler.ShowHideHelpView();
+        }
+
+        /// <summary>
+        /// Check if user press a specific key on the keyboard
+        /// </summary>
+        void UserKeyPressed(object sender, KeyEventArgs e)
+        {
+            // User press F1 --> open or close helpview
+            if (e.KeyCode.ToString() == "F1")
+            {
+                this.Ctrler.ShowHideHelpView();
+            }
+
+            if(e.KeyCode == Keys.S && (e.Control))
+            {
+                this.ExportDataButtonClick(null, null);
+            }
         }
     }
 }

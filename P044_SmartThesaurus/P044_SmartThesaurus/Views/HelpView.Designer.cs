@@ -72,7 +72,7 @@
             // button_close
             // 
             this.button_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_close.Location = new System.Drawing.Point(856, 489);
+            this.button_close.Location = new System.Drawing.Point(839, 784);
             this.button_close.Name = "button_close";
             this.button_close.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button_close.Size = new System.Drawing.Size(95, 23);

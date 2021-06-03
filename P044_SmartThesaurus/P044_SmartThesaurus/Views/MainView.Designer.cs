@@ -173,8 +173,8 @@ namespace P044_SmartThesaurus
             // exporterToolStripMenuItem
             // 
             this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
-            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.exporterToolStripMenuItem.Text = "Exporter";
+            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exporterToolStripMenuItem.Text = "CTRL-S - Exporter";
             this.exporterToolStripMenuItem.Click += new System.EventHandler(this.ExportDataButtonClick);
             // 
             // quitterLapplicationToolStripMenuItem
@@ -196,14 +196,14 @@ namespace P044_SmartThesaurus
             // listeFavorisToolStripMenuItem
             // 
             this.listeFavorisToolStripMenuItem.Name = "listeFavorisToolStripMenuItem";
-            this.listeFavorisToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.listeFavorisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listeFavorisToolStripMenuItem.Text = "Liste favoris";
             this.listeFavorisToolStripMenuItem.Click += new System.EventHandler(this.ShowBookmarksClick);
             // 
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.CreateBookmarkClick);
             // 
@@ -219,7 +219,7 @@ namespace P044_SmartThesaurus
             // 
             this.afficherLaideToolStripMenuItem.Name = "afficherLaideToolStripMenuItem";
             this.afficherLaideToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.afficherLaideToolStripMenuItem.Text = "Afficher l\'aide";
+            this.afficherLaideToolStripMenuItem.Text = "F1 - Afficher l\'aide";
             this.afficherLaideToolStripMenuItem.Click += new System.EventHandler(this.OpenHelpMenuStrip);
             // 
             // menuStrip

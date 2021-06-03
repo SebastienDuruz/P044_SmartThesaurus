@@ -22,6 +22,10 @@ namespace P044_SmartThesaurus
         {
             InitializeComponent();
             this.GetImagesFromResource();
+
+            // Add event to read user keys
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(UserKeyPressed);
         }
 
         /// <summary>
@@ -39,6 +43,18 @@ namespace P044_SmartThesaurus
         private void CloseButtonClick(object sender, EventArgs e)
         {
             this.Visible = !this.Visible;
+        }
+
+        /// <summary>
+        /// Check if user press a specific key on the keyboard
+        /// </summary>
+        void UserKeyPressed(object sender, KeyEventArgs e)
+        {
+            // User press F1 --> open or close helpview
+            if (e.KeyCode.ToString() == "F1")
+            {
+                this.Ctrler.ShowHideHelpView();
+            }
         }
     }
 }
