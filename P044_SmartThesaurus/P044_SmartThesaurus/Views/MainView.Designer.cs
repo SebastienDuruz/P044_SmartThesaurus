@@ -218,8 +218,9 @@ namespace P044_SmartThesaurus
             // afficherLaideToolStripMenuItem
             // 
             this.afficherLaideToolStripMenuItem.Name = "afficherLaideToolStripMenuItem";
-            this.afficherLaideToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.afficherLaideToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.afficherLaideToolStripMenuItem.Text = "Afficher l\'aide";
+            this.afficherLaideToolStripMenuItem.Click += new System.EventHandler(this.afficherLaideToolStripMenuItem_Click);
             // 
             // menuStrip
             // 

@@ -397,5 +397,15 @@ namespace P044_SmartThesaurus
         {
             return this.pathTextBox.Text;
         }
+
+       
+        /// <summary>
+        /// When user click the display help menu run the help view 
+        /// </summary>
+        private void afficherLaideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Ctrler.RunHelpView();
+
+        }
     }
 }

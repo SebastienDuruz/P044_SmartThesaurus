@@ -28,6 +28,7 @@ namespace P044_SmartThesaurus.Controllers
         private readonly ModifyBookmarkView _modifyBookmarkView = new ModifyBookmarkView();
         private readonly LastIndexed _lastIndexed = new LastIndexed();
         private readonly Bookmarks _bookmarks = new Bookmarks();
+        private readonly HelpView _helpView = new HelpView();
 
         /// <summary>
         /// Class Properties
@@ -44,6 +45,7 @@ namespace P044_SmartThesaurus.Controllers
             this._bookmarksView.Ctrler = this;
             this._createBookmarkView.Ctrler = this;
             this._modifyBookmarkView.Ctrler = this;
+            this._helpView.Ctrler = this;
         }
 
         /// <summary>
@@ -54,6 +56,14 @@ namespace P044_SmartThesaurus.Controllers
             this.GetLastIndexed();
             Application.Run(this._mainView);
         }
+        /// <summary>
+        /// Run the help view
+        /// </summary>
+        public void RunHelpView()
+        {
+            this._helpView.Show();
+        }
+
 
         /// <summary>
         /// Get all the files from indexed folder
