@@ -40,7 +40,7 @@ namespace P044_SmartThesaurus
         /// <summary>
         /// Check if user press a specific key on the keyboard
         /// </summary>
-        void UserKeyPressed(object sender, KeyEventArgs e)
+        private void UserKeyPressed(object sender, KeyEventArgs e)
         {
             // User press F1 --> open or close helpview
             if (e.KeyCode.ToString() == "F1")
