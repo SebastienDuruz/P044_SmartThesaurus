@@ -440,7 +440,7 @@ namespace P044_SmartThesaurus
             }
 
             // User press Escape --> close the application
-            if (e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Escape && (e.Control))
             {
                 this.ExitButtonClick(null, null);
             }
