@@ -1,4 +1,6 @@
-﻿// TODO : Add Pat header
+﻿/// Autor : Patricia Carqueijo Ribeiro
+/// Date : 04.06.2021
+/// Description : Help View class, help view with all the tips to help the user
 
 using P044_SmartThesaurus.Controllers;
 using System;

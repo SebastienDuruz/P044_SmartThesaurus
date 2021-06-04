@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label16.Text" xml:space="preserve">
+    <value> Les resultats de recherche peuvent être filtrés par nom à l'aide d'une syntaxe concise 
+ Il suffit d'entrer le nom dans l'emplacement prévu 
+ Pour combiné les resultats, lier deux chaines avec le caractère : (deux - points) 
+ Pour définir un nouveau filtre séparer les filtres avec le caractèret " | "</value>
+  </data>
 </root>
