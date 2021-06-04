@@ -53,6 +53,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.documentationPanel.SuspendLayout();
@@ -82,7 +83,7 @@
             // button_close
             // 
             this.button_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_close.Location = new System.Drawing.Point(842, 873);
+            this.button_close.Location = new System.Drawing.Point(842, 850);
             this.button_close.Name = "button_close";
             this.button_close.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button_close.Size = new System.Drawing.Size(95, 23);
@@ -107,7 +108,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Purple;
-            this.label3.Location = new System.Drawing.Point(175, 591);
+            this.label3.Location = new System.Drawing.Point(72, 885);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 18);
             this.label3.TabIndex = 5;
@@ -217,9 +218,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.documentationPanel.AutoScroll = true;
             this.documentationPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.documentationPanel.Controls.Add(this.label19);
             this.documentationPanel.Controls.Add(this.label18);
             this.documentationPanel.Controls.Add(this.label17);
             this.documentationPanel.Controls.Add(this.label16);
+            this.documentationPanel.Controls.Add(this.label3);
             this.documentationPanel.Controls.Add(this.label15);
             this.documentationPanel.Controls.Add(this.label14);
             this.documentationPanel.Controls.Add(this.label13);
@@ -238,7 +241,7 @@
             this.documentationPanel.Controls.Add(this.label6);
             this.documentationPanel.Location = new System.Drawing.Point(3, 3);
             this.documentationPanel.Name = "documentationPanel";
-            this.documentationPanel.Size = new System.Drawing.Size(835, 606);
+            this.documentationPanel.Size = new System.Drawing.Size(835, 604);
             this.documentationPanel.TabIndex = 18;
             // 
             // label18
@@ -286,7 +289,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.Purple;
-            this.label14.Location = new System.Drawing.Point(105, 708);
+            this.label14.Location = new System.Drawing.Point(105, 704);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(44, 13);
             this.label14.TabIndex = 19;
@@ -327,7 +330,7 @@
             // closeButton
             // 
             this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeButton.Location = new System.Drawing.Point(865, 557);
+            this.closeButton.Location = new System.Drawing.Point(865, 558);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(95, 40);
             this.closeButton.TabIndex = 19;
@@ -335,19 +338,28 @@
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.CloseButtonClick);
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.Purple;
+            this.label19.Location = new System.Drawing.Point(72, 841);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(44, 13);
+            this.label19.TabIndex = 24;
+            this.label19.Text = "- Quitter";
+            // 
             // HelpView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(986, 633);
+            this.ClientSize = new System.Drawing.Size(986, 610);
             this.ControlBox = false;
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_close);
             this.Controls.Add(this.documentationPanel);
-            this.Controls.Add(this.label3);
-            this.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MinimumSize = new System.Drawing.Size(1002, 649);
@@ -359,7 +371,6 @@
             this.documentationPanel.ResumeLayout(false);
             this.documentationPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -389,5 +400,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label19;
     }
 }
