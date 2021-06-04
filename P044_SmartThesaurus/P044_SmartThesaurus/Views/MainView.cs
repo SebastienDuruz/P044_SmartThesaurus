@@ -430,13 +430,21 @@ namespace P044_SmartThesaurus
             // User press A --> open the addBookmark view
             if(e.KeyCode == Keys.A)
             {
-                this.CreateBookmarkClick(null, null);
+                // Check if the focus is on filterbox or pathbox (is writing)
+                if (!this.filtersTextBox.Focused && !this.pathTextBox.Focused)
+                {
+                    this.Ctrler.ShowHideCreateBookmarkView();
+                }
             }
 
             // User press E --> close the bookmarklist view
             if(e.KeyCode == Keys.E)
             {
-                this.ShowBookmarksClick(null, null);
+                // Check if the focus is on filterbox or pathbox (is writing)
+                if (!this.filtersTextBox.Focused && !this.pathTextBox.Focused)
+                {
+                    this.Ctrler.ShowHideBookmarksView();
+                }
             }
 
             // User press Escape --> close the application

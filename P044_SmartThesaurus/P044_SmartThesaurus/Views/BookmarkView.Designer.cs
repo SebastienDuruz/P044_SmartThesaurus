@@ -112,6 +112,7 @@ namespace P044_SmartThesaurus.Views
             // 
             // BookmarkView
             // 
+            this.AcceptButton = this.closeButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 596);
@@ -122,6 +123,7 @@ namespace P044_SmartThesaurus.Views
             this.Controls.Add(this.bookmarksListView);
             this.MinimumSize = new System.Drawing.Size(500, 500);
             this.Name = "BookmarkView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Mes favoris";
             this.ResumeLayout(false);
 

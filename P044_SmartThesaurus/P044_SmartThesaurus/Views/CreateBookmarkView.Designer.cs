@@ -138,6 +138,7 @@ namespace P044_SmartThesaurus.Views
             this.MaximumSize = new System.Drawing.Size(460, 455);
             this.MinimumSize = new System.Drawing.Size(460, 455);
             this.Name = "CreateBookmarkView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Créer votre favoris";
             this.ResumeLayout(false);
             this.PerformLayout();

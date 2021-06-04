@@ -138,6 +138,7 @@ namespace P044_SmartThesaurus.Views
             this.MaximumSize = new System.Drawing.Size(463, 465);
             this.MinimumSize = new System.Drawing.Size(463, 465);
             this.Name = "ModifyBookmarkView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Modifier votre favoris";
             this.ResumeLayout(false);
             this.PerformLayout();
