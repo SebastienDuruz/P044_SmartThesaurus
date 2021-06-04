@@ -422,36 +422,36 @@ namespace P044_SmartThesaurus
             }
 
             // User press CTRL-S --> execute the exportation
-            if(e.KeyCode == Keys.S && (e.Control))
+            else if(e.KeyCode == Keys.S && (e.Control))
             {
                 this.ExportDataButtonClick(null, null);
             }
 
             // User press A --> open the addBookmark view
-            if(e.KeyCode == Keys.A)
+            else if(e.KeyCode == Keys.A && (e.Control))
             {
-                // Check if the focus is on filterbox or pathbox (is writing)
-                if (!this.filtersTextBox.Focused && !this.pathTextBox.Focused)
-                {
-                    this.Ctrler.ShowHideCreateBookmarkView();
-                }
+                this.Ctrler.ShowHideCreateBookmarkView();
             }
 
             // User press E --> close the bookmarklist view
-            if(e.KeyCode == Keys.E)
+            else if(e.KeyCode == Keys.E && (e.Control))
             {
-                // Check if the focus is on filterbox or pathbox (is writing)
-                if (!this.filtersTextBox.Focused && !this.pathTextBox.Focused)
-                {
-                    this.Ctrler.ShowHideBookmarksView();
-                }
+                this.Ctrler.ShowHideBookmarksView();
             }
 
             // User press Escape --> close the application
-            if (e.KeyCode == Keys.Escape && (e.Control))
+            else if (e.KeyCode == Keys.Escape)
             {
                 this.ExitButtonClick(null, null);
             }
+        }
+
+        /// <summary>
+        /// Give focus to pathLabel when user click form
+        /// </summary>
+        private void ResetFocus(object sender, EventArgs e)
+        {
+            this.pathLabel.Focus();
         }
     }
 }
