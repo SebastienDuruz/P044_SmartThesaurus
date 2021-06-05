@@ -430,7 +430,7 @@ namespace P044_SmartThesaurus
             // User press A --> open the addBookmark view
             else if(e.KeyCode == Keys.A && (e.Control))
             {
-                this.Ctrler.ShowHideCreateBookmarkView();
+                this.CreateBookmarkClick(null, null);
             }
 
             // User press E --> close the bookmarklist view
@@ -452,6 +452,14 @@ namespace P044_SmartThesaurus
         private void ResetFocus(object sender, EventArgs e)
         {
             this.pathLabel.Focus();
+        }
+
+        /// <summary>
+        /// Open HelpMenu if user press one of the Help icons
+        /// </summary>
+        private void HelpIconClick(object sender, EventArgs e)
+        {
+            this.Ctrler.ShowHideHelpView();
         }
     }
 }

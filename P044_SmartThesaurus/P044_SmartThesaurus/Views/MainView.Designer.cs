@@ -122,6 +122,7 @@ namespace P044_SmartThesaurus
             // 
             // filterHelpPictureBox
             // 
+            this.filterHelpPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.filterHelpPictureBox.Image = global::P044_SmartThesaurus.Properties.Resources.help_icon;
             this.filterHelpPictureBox.Location = new System.Drawing.Point(254, 15);
             this.filterHelpPictureBox.Name = "filterHelpPictureBox";
@@ -129,6 +130,7 @@ namespace P044_SmartThesaurus
             this.filterHelpPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.filterHelpPictureBox.TabIndex = 28;
             this.filterHelpPictureBox.TabStop = false;
+            this.filterHelpPictureBox.Click += new System.EventHandler(this.HelpIconClick);
             // 
             // cancelButton
             // 
@@ -342,6 +344,7 @@ namespace P044_SmartThesaurus
             // 
             // bookmarkHelpIcon
             // 
+            this.bookmarkHelpIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bookmarkHelpIcon.Image = global::P044_SmartThesaurus.Properties.Resources.help_icon;
             this.bookmarkHelpIcon.Location = new System.Drawing.Point(254, 19);
             this.bookmarkHelpIcon.Name = "bookmarkHelpIcon";
@@ -349,6 +352,7 @@ namespace P044_SmartThesaurus
             this.bookmarkHelpIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bookmarkHelpIcon.TabIndex = 29;
             this.bookmarkHelpIcon.TabStop = false;
+            this.bookmarkHelpIcon.Click += new System.EventHandler(this.HelpIconClick);
             // 
             // favoritePictureBox
             // 
