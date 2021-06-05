@@ -118,7 +118,7 @@ namespace P044_SmartThesaurus.AppBusiness
         /// Process a file
         /// </summary>
         /// <param name="path">The path to process</param>
-        private static string ProcessFile(string path)
+        private string ProcessFile(string path)
         {
             string[] parts = path.Split('\\');
             return parts[parts.Count() - 1];
