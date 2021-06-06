@@ -117,10 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Un menu en bandeau est disponible à l'utilisateur. 
+Celui-ci regroupe la majorité des fonctionnalités secondaires (hors indexation).
+
+Ce menu est séparé en différentes sections regroupant plusieurs fonctionnalités :
+</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Il est possible d'ouvrir le résultat actuellement sélectionner directement dans l'explorateur de fichiers ou 
+dans le naviguateur par défaut (dans le cas d'un lien).
+
+Pour ce faire deux choix sont proposés :
+   --&gt; Menu en bandeau
+   --&gt; Double clic souris sur l'élément souhaité</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Afin d'exporter les résultats dans le fichier texte de son choix :
+   --&gt; Menu en bandeau "Exporter"
+   --&gt; Choisir le fichier de destination
+Le fichier est alors créer et les résultats actuellement présent à l'écran sont ajoutés.
+Attention, les fitres seront pris en compte au moment de l'exportation !</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>L'exportation permet à un utilisateur de stockés les résultats retournés dans un fichier texte séparéé 
+par le charactère "|". Cela simplifie l'utilisation de ces données dans une application de tableur par exemple.</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Une page permettant la visualisation, la modification et la suppression d'un favoris
+est disponible de deux manières :
+   --&gt; Menu en bandeau
+   --&gt; CTRL-E au clavier
+
+Cette page contient la liste des favoris.
+La modification / suppression d'un favori est accessible en sélectionnant le favori que l'on souhaite. 
+Les deux boutons en bas de la fenêtre seront alors actifs.</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Cette fonctionnalité est accessible de différentes manières :
+   --&gt; Menu en bandeau
+   --&gt; Cliquer sur l'étoile
+   --&gt; CTRL-A au clavier
+Une fois la page ouverte un nom sera demandé.
+Une description (facultative) peut aussi être ajoutée au favoris.
+Attention, deux favoris ne peuvent avoir le même nom!</value>
+  </data>
   <data name="label16.Text" xml:space="preserve">
-    <value> Les resultats de recherche peuvent être filtrés par nom à l'aide d'une syntaxe concise 
- Il suffit d'entrer le nom dans l'emplacement prévu 
- Pour combiné les resultats, lier deux chaines avec le caractère : (deux - points) 
- Pour définir un nouveau filtre séparer les filtres avec le caractèret " | "</value>
+    <value>Les résultats de recherche peuvent être filtrés par nom à l'aide d'une syntaxe concise 
+   --&gt; Pour combiner les filtres, les lier avec le caractère ":" 
+   --&gt; Pour définir un nouveau filtre, séparer les filtres avec le caractère " | "
+Une fois cela fait il suffit d'appliquer les filtres avec le bouton "Rechercher".
+Les résultats filtrés apparaisent alors dans la liste prévue à cet effet.
+
+Pour retirer les filtres et ainsi retrouver ses résultats au complet, le bouton rouge "Annuler" est disponible.</value>
   </data>
 </root>
