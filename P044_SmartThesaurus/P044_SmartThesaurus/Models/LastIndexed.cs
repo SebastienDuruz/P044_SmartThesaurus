@@ -34,8 +34,7 @@ namespace P044_SmartThesaurus.Models
         {
             if (CheckFile())
             {
-                string test = File.ReadAllText(this.FilePath).Trim('\n', '\r');
-                return test;
+                return File.ReadAllText(this.FilePath).Trim('\n', '\r');
             }
             else
             {

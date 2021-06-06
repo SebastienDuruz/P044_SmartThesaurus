@@ -63,5 +63,24 @@ namespace P044_SmartThesaurus_UnitTests
             // Assert
             Assert.AreEqual(expected[0], results[0]);
         }
+
+        /// <summary>
+        /// Test if the indexation return the correct number of elements
+        /// TODO : The folder should contains the same amount of item that expected var
+        /// </summary>
+        [TestMethod]
+        public void GetFilesFromIndexationTest()
+        {
+            // Arrange
+            string path = @"C:\Users\Sébastien\Documents\test";
+            int expected = 3;
+
+            // Act
+            this.Controller = new MainController();
+            List<IndexedObject> results = this.Controller.GetFilesFromIndexation(path);
+
+            // Assert
+            Assert.AreEqual(expected, results.Count);
+        }
     }
 }
