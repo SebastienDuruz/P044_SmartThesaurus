@@ -21,6 +21,17 @@ namespace P044_SmartThesaurus
     public partial class MainView : Form
     {
         /// <summary>
+        /// Enum : The type of Indexed Object
+        /// </summary>
+        enum ObjectType
+        {
+            Dossier,
+            Fichier,
+            Image,
+            Lien
+        }
+
+        /// <summary>
         /// Class Properties
         /// </summary>
         public MainController Ctrler { get; set; }
@@ -121,19 +132,20 @@ namespace P044_SmartThesaurus
             //Foreach objects in the list
             foreach (IndexedObject result in results)
             {
-                switch (result.Type)
+                // Check what type of object as been created
+                switch ((ObjectType)Enum.Parse(typeof(ObjectType), result.Type))
                 {
-                    case "Dossier":
+                    case ObjectType.Dossier:
                         this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 0));
                         break;
-                    case "Fichier":
+                    case ObjectType.Fichier:
                         this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 1));
                         break;
-                    case "Lien":
-                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 2));
-                        break;
-                    case "Image":
+                    case ObjectType.Image:
                         this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 3));
+                        break;
+                    case ObjectType.Lien:
+                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 2));
                         break;
                 }
             }
@@ -157,22 +169,23 @@ namespace P044_SmartThesaurus
         }
 
         /// <summary>
-        /// Open the path
+        /// Open the path with explorer
         /// </summary>
         private void OpenWithExplorer(object sender, EventArgs e)
         {
             if (this.outputListBox.SelectedItems.Count > 0)
             {
-                switch(this.outputListBox.SelectedItems[0].SubItems[0].Text)
+                // Open the path of the object or directly the object if the item is a folder or a link
+                switch((ObjectType)Enum.Parse(typeof(ObjectType), this.outputListBox.SelectedItems[0].SubItems[0].Text))
                 {
-                    case "Image":
-                    case "Fichier":
+                    case ObjectType.Image:
+                    case ObjectType.Fichier:
                         Process.Start("explorer.exe", this.outputListBox.SelectedItems[0].SubItems[2].Text);
                         break;
-                    case "Dossier":
+                    case ObjectType.Dossier:
                         Process.Start("explorer.exe", $@"{ this.outputListBox.SelectedItems[0].SubItems[2].Text}\{this.outputListBox.SelectedItems[0].SubItems[1].Text}");
                         break;
-                    case "Lien":
+                    case ObjectType.Lien:
                         Process.Start("explorer.exe", this.outputListBox.SelectedItems[0].SubItems[1].Text);
                         break;
                 }
