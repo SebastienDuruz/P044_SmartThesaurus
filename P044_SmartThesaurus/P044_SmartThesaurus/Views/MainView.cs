@@ -186,7 +186,8 @@ namespace P044_SmartThesaurus
                         Process.Start("explorer.exe", $@"{ this.outputListBox.SelectedItems[0].SubItems[2].Text}\{this.outputListBox.SelectedItems[0].SubItems[1].Text}");
                         break;
                     case ObjectType.Lien:
-                        Process.Start("explorer.exe", this.outputListBox.SelectedItems[0].SubItems[1].Text);
+                        // Open link with web browser
+                        Process.Start(this.outputListBox.SelectedItems[0].SubItems[1].Text);
                         break;
                 }
             }
