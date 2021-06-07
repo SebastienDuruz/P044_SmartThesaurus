@@ -21,14 +21,14 @@ namespace P044_SmartThesaurus
     public partial class MainView : Form
     {
         /// <summary>
-        /// Enum : The type of Indexed Object
+        /// Enum : The possible type of indexed objects
         /// </summary>
         enum ObjectType
         {
             Dossier,
             Fichier,
-            Image,
-            Lien
+            Lien,
+            Image
         }
 
         /// <summary>
@@ -132,22 +132,8 @@ namespace P044_SmartThesaurus
             //Foreach objects in the list
             foreach (IndexedObject result in results)
             {
-                // Check what type of object as been created
-                switch ((ObjectType)Enum.Parse(typeof(ObjectType), result.Type))
-                {
-                    case ObjectType.Dossier:
-                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 0));
-                        break;
-                    case ObjectType.Fichier:
-                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 1));
-                        break;
-                    case ObjectType.Image:
-                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 3));
-                        break;
-                    case ObjectType.Lien:
-                        this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, 2));
-                        break;
-                }
+                // Get the type of object from Enum
+                this.outputListBox.Items.Add(new ListViewItem(new string[] { result.Type, result.Name, result.Path }, (int)Enum.Parse(typeof(ObjectType), result.Type)));
             }
         }
 
@@ -216,7 +202,7 @@ namespace P044_SmartThesaurus
                     {
                         foreach (ListViewItem result in this.outputListBox.Items)
                         {
-                            writer.WriteLine($"{result.SubItems[0].Text} | {result.SubItems[1].Text} | {result.SubItems[2].Text}");
+                            writer.WriteLine($"{result.SubItems[0].Text} , {result.SubItems[1].Text} , {result.SubItems[2].Text}");
                         }
                     };
                 }

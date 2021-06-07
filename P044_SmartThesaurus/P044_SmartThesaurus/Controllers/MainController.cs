@@ -150,19 +150,15 @@ namespace P044_SmartThesaurus.Controllers
                         //Check all filters that need to be combined
                         foreach (string filterToCombine in splited)
                         {
-                            //Is matching do nothing
-                            if (result.Name.Contains(filterToCombine) && !filteredResults.Contains(result))
-                            {
-
-                            }
-                            //Does not match
-                            else
+                            // If does not match
+                            if (!result.Name.ToLower().Contains(filterToCombine.ToLower()) && !result.Type.ToLower().Equals(filterToCombine.ToLower()))
                             {
                                 match = false;
                             }
                         }
 
-                        if (match)
+                        // if match add the result to filtered list
+                        if (match && !filteredResults.Contains(result))
                         {
                             filteredResults.Add(result);
                         }
