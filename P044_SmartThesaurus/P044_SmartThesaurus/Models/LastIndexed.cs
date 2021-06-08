@@ -49,10 +49,21 @@ namespace P044_SmartThesaurus.Models
         /// <param name="lastIndexed">The lastindexed folder source</param>
         public void SetLastindexed(string lastIndexed)
         {
-            // Write the lastIndexed to file
-            using (StreamWriter writer = new StreamWriter(this.FilePath))
+            try
             {
-                writer.WriteLine(lastIndexed);
+                // Write the lastIndexed to file
+                using (StreamWriter writer = new StreamWriter(this.FilePath))
+                {
+                    writer.WriteLine(lastIndexed);
+                }
+            }
+            catch(Exception ex)
+            {
+                // Write the exception message to log.txt
+                using (StreamWriter writer = new StreamWriter($"{Environment.CurrentDirectory}/log.txt"))
+                {
+                    writer.WriteLine($"Exception throwed from lastIndexed at [{DateTime.Now}] {ex.Message}\n{ex.StackTrace}");
+                }
             }
         }
 

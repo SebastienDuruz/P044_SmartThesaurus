@@ -88,8 +88,20 @@ namespace P044_SmartThesaurus.AppBusiness
                 this.CreateBookmarksFile();
             }
 
-            // Append new bookmark to bookmarks file
-            File.WriteAllText(BookmarksPath, JsonConvert.SerializeObject(BookmarksObjects, Formatting.Indented));
+
+            try
+            {
+                // Append new bookmark to bookmarks file
+                File.WriteAllText(BookmarksPath, JsonConvert.SerializeObject(BookmarksObjects, Formatting.Indented));
+            }
+            catch (Exception ex)
+            {
+                // Write the exception message to log.txt
+                using (StreamWriter writer = new StreamWriter($"{Environment.CurrentDirectory}/log.txt"))
+                {
+                    writer.WriteLine($"Exception throwed from lastIndexed at [{DateTime.Now}] {ex.Message}\n{ex.StackTrace}");
+                }
+            }
         }
 
         /// <summary>
