@@ -264,7 +264,7 @@ namespace P044_SmartThesaurus.Controllers
             {
                 return this._bookmarks.BookmarksObjects;
             }
-            return null;
+            return new List<Bookmark>();
         }
 
         /// <summary>
@@ -343,12 +343,15 @@ namespace P044_SmartThesaurus.Controllers
             bool exists = false;
 
             // Check each bookmark for corresponding with currentPath
-            foreach(Bookmark bookmark in bookmarks)
+            if(bookmarks.Count >= 1)
             {
-                if(bookmark.Path == currentPath)
+                foreach (Bookmark bookmark in bookmarks)
                 {
-                    exists = true;
-                    break;
+                    if (bookmark.Path == currentPath)
+                    {
+                        exists = true;
+                        break;
+                    }
                 }
             }
 
