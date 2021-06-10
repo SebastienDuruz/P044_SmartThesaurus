@@ -99,6 +99,8 @@ namespace P044_SmartThesaurus.Views
         private void ModifyButtonClick(object sender, EventArgs e)
         {
             this.Ctrler.ShowHideModifyBookmarkView(this.bookmarksListView.SelectedItems[0].SubItems[0].Text, this.bookmarksListView.SelectedItems[0].SubItems[1].Text, this.bookmarksListView.SelectedItems[0].SubItems[2].Text);
+            this.modifyButton.Enabled = false;
+            this.deleteButton.Enabled = false;
         }
 
         /// <summary>
