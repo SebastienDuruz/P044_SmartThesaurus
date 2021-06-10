@@ -123,5 +123,18 @@ namespace P044_SmartThesaurus.Views
                 this.Ctrler.ShowHideBookmarksView();
             }
         }
+
+        /// <summary>
+        /// Desactivate the modify + delete buttons when bookmarks view is hide
+        /// </summary>
+        private void BookmarksViewVisibleChanged(object sender, EventArgs e)
+        {
+            // the form is hide disable the two buttons
+            if(this.Visible == false)
+            {
+                this.modifyButton.Enabled = false;
+                this.deleteButton.Enabled = false;
+            }
+        }
     }
 }

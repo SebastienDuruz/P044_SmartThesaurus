@@ -125,6 +125,7 @@ namespace P044_SmartThesaurus.Views
             this.Name = "BookmarkView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Mes favoris";
+            this.VisibleChanged += new System.EventHandler(this.BookmarksViewVisibleChanged);
             this.ResumeLayout(false);
 
         }
